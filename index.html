@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta name="deck-build" content="20260917-134705">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 成果與 2027 展望 — 年度主管會議</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="base.css">
+<style>
+/* 年度主管會議 2026 追加版型。尺寸一律 calc(N*var(--u))。 */
+
+/* ---- 封面 ---- */
+.probe-cover{padding:0 var(--edge-x) var(--edge-bottom);}
+.probe-cover__visual{flex:1;min-height:0;margin:0 calc(-1 * var(--edge-x));background:var(--paper-warm);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.cov-full{padding:0;display:block;overflow:hidden;}
+.cov-full__img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;}
+.cov-full__txt{position:absolute;left:var(--edge-x);top:calc(5*var(--u));display:flex;flex-direction:column;align-items:flex-start;gap:calc(0.5*var(--u));}
+.cov-full__kicker{font-size:calc(1.3*var(--u));font-weight:700;letter-spacing:0.35em;color:var(--green-primary);}
+.cov-full__title{font-size:calc(3.8*var(--u));font-weight:900;color:var(--ink);line-height:1.15;border-top:3px solid var(--green-primary);padding-top:calc(1*var(--u));margin-top:calc(0.6*var(--u));}
+.cov-full__meta{position:absolute;right:var(--edge-x);bottom:var(--edge-bottom);display:flex;flex-direction:column;align-items:flex-end;gap:calc(1.2*var(--u));}
+.cov-visual__big{font-size:calc(8*var(--u));font-weight:900;color:var(--green-primary);letter-spacing:0.02em;line-height:1;}
+.cov-visual__small{font-size:calc(1.6*var(--u));font-weight:700;letter-spacing:0.3em;color:var(--mid-gray);}
+.probe-cover__bottom{padding-top:calc(2.5 * var(--u));display:flex;justify-content:space-between;align-items:flex-end;}
+.probe-cover__title{font-size:var(--fs-cover-title);font-weight:900;color:var(--ink);line-height:1.15;border-top:3px solid var(--green-primary);padding-top:calc(1.5 * var(--u));}
+.probe-cover__title small{display:block;font-size:calc(1.3 * var(--u));font-weight:700;letter-spacing:0.35em;color:var(--green-primary);margin-bottom:calc(0.6 * var(--u));}
+.probe-cover__right{display:flex;flex-direction:column;align-items:flex-end;gap:calc(1.4 * var(--u));}
+.probe-cover__subtitle{font-size:calc(1.1 * var(--u));font-weight:500;color:var(--mid-gray);text-align:right;line-height:1.9;}
+.probe-cover__logo{display:block;height:calc(2.4 * var(--u));width:auto;aspect-ratio:162.16/45.83;color:var(--green-primary);}
+
+/* ---- 共用 ---- */
+.hero{font-size:var(--fs-hero);font-weight:900;color:var(--ink);border-top:3px solid var(--green-primary);padding-top:calc(1.5*var(--u));margin-bottom:calc(1.6*var(--u));}
+.slide-frame:has(.orgsvg) .hero{margin-bottom:calc(0.8*var(--u));}
+.chart{flex:1;min-height:0;display:flex;}
+.chart svg{width:100%;height:100%;}
+.srclink{margin-top:calc(0.8*var(--u));font-size:calc(1.2*var(--u));}
+.srclink a{color:var(--green-primary);text-decoration:none;border-bottom:1px solid rgba(55,156,57,0.45);padding-bottom:calc(0.1*var(--u));}
+.srclink a:hover{color:var(--green-dark);border-bottom-color:var(--green-dark);}
+.foot{font-size:calc(1.15*var(--u));color:var(--mid-gray);line-height:1.6;margin-top:calc(1*var(--u));}
+.slide-frame p:empty,.slide-frame .foot:empty{display:none;}
+.slide-frame > .msask{margin-top:auto;}
+
+/* ---- S3 差異關鍵 ---- */
+.gap{flex:1;min-height:0;display:grid;grid-template-columns:0.85fr 1.15fr;gap:calc(3*var(--u));}
+.gap>*{min-height:0;}
+.gap__text{display:flex;flex-direction:column;justify-content:center;gap:calc(1.4*var(--u));}
+.gap__text p{font-size:calc(2.4*var(--u));line-height:1.45;font-weight:700;color:var(--ink);background:var(--paper-warm);border-left:calc(0.6*var(--u)) solid var(--green-primary);border-radius:var(--radius-sm);padding:calc(1.1*var(--u)) calc(1.6*var(--u));}
+.gap__text p b{font-weight:900;color:var(--green-dark);}
+.gap__text .gap__sub{font-size:calc(1.55*var(--u));line-height:1.7;font-weight:400;color:var(--mid-gray);background:none;border-left:0;padding:0;margin-top:calc(0.2*var(--u));}
+.gap__text .gap__sub b{color:var(--ink);}
+.gap__camp{margin-top:calc(1.6*var(--u));padding-left:calc(0.4*var(--u));}
+.gap__camp-l{font-size:calc(1.55*var(--u));color:var(--mid-gray);margin-bottom:calc(0.3*var(--u));}
+.gap__camp-row{display:flex;gap:calc(1.8*var(--u));}
+.gap__camp-n{font-weight:900;color:#B8412E;font-size:calc(1.8*var(--u));white-space:nowrap;}
+.gap__chart{display:flex;}
+.gap__chart svg{width:100%;height:100%;}
+
+/* ---- 表格 ---- */
+.dt{width:100%;border-collapse:collapse;font-size:calc(1.95*var(--u));color:var(--ink);margin-top:calc(0.6*var(--u));}
+.dt th,.dt td{padding:calc(0.62*var(--u)) calc(1*var(--u));border-bottom:1px solid #E6E6E6;text-align:left;line-height:1.35;}
+.dt thead th{font-size:calc(1.35*var(--u));font-weight:700;letter-spacing:0.08em;color:var(--mid-gray);border-bottom:2px solid var(--green-primary);}
+.dt .num{text-align:right;font-variant-numeric:tabular-nums;}
+.dt__grp{font-size:calc(1.35*var(--u));font-weight:700;letter-spacing:0.08em;color:var(--green-primary);width:calc(12*var(--u));vertical-align:top;padding-top:calc(0.8*var(--u));}
+.dt__d{font-weight:700;}
+.dt__p{color:var(--mid-gray);}
+.dt__hot td:not(.dt__grp){background:var(--paper-warm);}
+.dt__hot .dt__d,.dt__hot .dt__p{color:var(--green-dark);font-weight:900;}
+.dt__flat .dt__d,.dt__flat .dt__p{color:#B8412E;}
+.dt__total td{font-weight:900;border-top:2px solid var(--ink);border-bottom:none;font-size:calc(2.1*var(--u));}
+
+/* ---- S5 組織 ---- */
+.ot{width:100%;border-collapse:collapse;font-size:calc(1.5*var(--u));color:var(--ink);text-align:center;font-variant-numeric:tabular-nums;}
+.ot th,.ot td{padding:calc(0.38*var(--u)) calc(0.28*var(--u));border-bottom:1px solid #E6E6E6;line-height:1.3;}
+.ot thead th{font-size:calc(1.2*var(--u));font-weight:700;color:var(--mid-gray);border-bottom:2px solid var(--green-primary);white-space:nowrap;}
+.ot tbody th{text-align:left;font-size:calc(1.25*var(--u));font-weight:700;letter-spacing:0.08em;color:var(--green-primary);white-space:nowrap;}
+.ot .ot__sum{font-weight:900;background:var(--paper-warm);}
+.ot .ot__hi{color:var(--green-dark);font-weight:900;}
+.org-cmp{display:flex;align-items:center;justify-content:center;gap:calc(2.5*var(--u));margin-top:calc(2.2*var(--u));}
+.org-cmp__item{text-align:center;}
+.org-cmp__num{font-size:calc(4.2*var(--u));font-weight:900;color:var(--green-primary);line-height:1;}
+.org-cmp__item--now .org-cmp__num{color:var(--green-dark);font-size:calc(5*var(--u));}
+.org-cmp__lab{font-size:calc(1.2*var(--u));color:var(--mid-gray);line-height:1.5;margin-top:calc(0.5*var(--u));}
+.org-cmp__arrow{font-size:calc(2.4*var(--u));font-weight:900;color:var(--green-primary);}
+/* S5 合計數字帶＋組織圖 */
+.ten{display:flex;align-items:flex-start;gap:calc(1.3*var(--u));margin-bottom:calc(0.4*var(--u));}
+.ten__item{text-align:center;}
+.ten__n{font-size:calc(3*var(--u));font-weight:900;color:var(--green-primary);line-height:1.05;}
+.ten__item--tot .ten__n{font-size:calc(3.8*var(--u));color:var(--green-dark);}
+.ten__item--new .ten__n{color:#B8412E;}
+.ten__l{font-size:calc(1.2*var(--u));color:var(--mid-gray);margin-top:calc(0.2*var(--u));}
+.ten__op{font-size:calc(2.4*var(--u));font-weight:900;color:#C9C9C9;line-height:1.5;}
+.orgsvg{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;margin-top:calc(0.4*var(--u));}
+.orgsvg svg{width:100%;height:100%;}
+.archnote{margin-top:calc(0.6*var(--u));font-size:calc(1.7*var(--u));line-height:1.65;color:var(--mid-gray);}
+.archnote b{color:var(--green-dark);font-weight:900;}
+/* 七項 × 五單位 bipartite */
+.bip__link{stroke:#CBD8CB;stroke-width:3;fill:none;transition:opacity .25s,stroke .25s,stroke-width .25s;}
+.bip__node{cursor:pointer;transition:opacity .25s;}
+.bip__box,.bip__t,.bip__s{transition:fill .25s,stroke .25s;}
+.bip.is-on .bip__link{opacity:.1;}
+.bip.is-on .bip__link.hot{opacity:1;stroke:#379C39;stroke-width:5.5;}
+.bip.is-on .bip__node{opacity:.3;}
+.bip.is-on .bip__node.hot{opacity:1;}
+.bip__node.hot .bip__box{fill:#004B24;stroke:#004B24;}
+.bip__node--dept.hot .bip__box{fill:#379C39;stroke:#379C39;}
+.bip__node.hot .bip__t{fill:#FFFFFF;}
+.bip__node.hot .bip__s{fill:rgba(255,255,255,.82);}
+.biphint{margin-top:calc(0.7*var(--u));font-size:calc(1.3*var(--u));color:var(--mid-gray);}
+.msask{display:flex;align-items:baseline;gap:calc(1.4*var(--u));background:var(--green-dark);border-radius:var(--radius-sm);padding:calc(0.9*var(--u)) calc(1.8*var(--u));margin-top:calc(1*var(--u));}
+.msask__l{font-size:calc(1.5*var(--u));font-weight:900;letter-spacing:0.12em;color:var(--hi-yellow);white-space:nowrap;}
+.msask__q{font-size:calc(1.85*var(--u));font-weight:700;color:#fff;line-height:1.4;}
+
+
+/* S5 前後對照＋金句 */
+.org-then{display:flex;align-items:center;gap:calc(1.8*var(--u));margin-top:calc(1.2*var(--u));}
+.org-then__item{text-align:center;}
+.org-then__yr{font-size:calc(1.15*var(--u));color:var(--mid-gray);}
+.org-then__n{font-size:calc(1.9*var(--u));font-weight:700;color:var(--ink);line-height:1.2;}
+.org-then__p{font-size:calc(2.4*var(--u));font-weight:900;color:var(--mid-gray);line-height:1.1;}
+.org-then__p--now{color:var(--green-dark);font-size:calc(3*var(--u));}
+.org-then__arrow{font-size:calc(2.4*var(--u));font-weight:900;color:var(--green-primary);}
+.org-then__note{font-size:calc(1.35*var(--u));line-height:1.6;color:var(--mid-gray);margin-left:calc(1.5*var(--u));}
+.org-quote{margin-top:calc(1.1*var(--u));background:var(--green-dark);border-radius:var(--radius-sm);padding:calc(0.9*var(--u)) calc(1.8*var(--u));}
+.org-quote__q{font-size:calc(2.6*var(--u));font-weight:900;color:var(--hi-yellow);line-height:1.25;}
+.org-quote__s{font-size:calc(1.55*var(--u));color:rgba(255,255,255,0.88);margin-top:calc(0.4*var(--u));}
+
+.ot .ot__mid{color:var(--green-primary);font-weight:700;}
+.ot__total td,.ot__total th{border-top:2px solid var(--ink);font-weight:900;}
+
+/* ---- P2 議程 ---- */
+.ag{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:calc(0.9*var(--u));margin-top:calc(0.6*var(--u));}
+.ag-row{display:grid;grid-template-columns:calc(7*var(--u)) auto 1fr;align-items:baseline;gap:calc(1.6*var(--u));padding:calc(0.7*var(--u)) calc(1.6*var(--u));border-bottom:1px solid rgba(0,0,0,0.08);}
+.ag-row:last-child{border-bottom:0;}
+.ag-row__no{font-size:calc(3.2*var(--u));font-weight:900;color:var(--green-primary);line-height:1;font-variant-numeric:tabular-nums;}
+.ag-row__t{font-size:calc(3*var(--u));font-weight:900;color:var(--ink);line-height:1.2;}
+.ag-row__s{font-size:calc(1.6*var(--u));color:var(--mid-gray);}
+
+/* ---- 組織與人力（合併頁） ---- */
+.oh-svg{margin-top:calc(0.2*var(--u));}
+.oh-row{display:grid;grid-template-columns:repeat(10,1fr);gap:calc(0.6*var(--u));margin-top:calc(0.6*var(--u));}
+.oh-cell{background:var(--paper-warm);border-radius:var(--radius-sm);padding:calc(0.5*var(--u)) calc(0.3*var(--u)) calc(0.6*var(--u));text-align:center;display:flex;flex-direction:column;align-items:center;gap:calc(0.1*var(--u));}
+.oh-cell--hi{background:var(--green-dark);}
+.oh-cell__n{font-size:calc(2.6*var(--u));font-weight:900;color:var(--green-dark);line-height:1;}
+.oh-cell--hi .oh-cell__n{color:#fff;}
+.oh-cell__d{font-size:calc(1.15*var(--u));font-weight:900;color:#B5B5B5;white-space:nowrap;line-height:1.3;}
+.oh-cell--hi .oh-cell__d{color:var(--hi-yellow);}
+.oh-cell__k{font-size:calc(1.2*var(--u));font-weight:700;color:var(--ink);white-space:nowrap;line-height:1.3;}
+.oh-cell--hi .oh-cell__k{color:rgba(255,255,255,0.9);}
+
+/* ---- 你們的開放題（可打字） ---- */
+.op2{flex:1;min-height:0;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:1fr 1fr;gap:calc(1.2*var(--u));margin-top:calc(0.4*var(--u));}
+.op2-card{background:var(--paper-warm);border-radius:var(--radius-md);padding:calc(0.9*var(--u)) calc(1.2*var(--u));display:flex;flex-direction:column;min-height:0;}
+.op2-card__t{font-size:calc(1.7*var(--u));font-weight:900;color:var(--green-dark);border-bottom:2px solid var(--green-primary);padding-bottom:calc(0.4*var(--u));margin-bottom:calc(0.5*var(--u));}
+.op2-card__in{flex:1;min-height:0;overflow:auto;font-size:calc(1.55*var(--u));line-height:1.5;color:var(--ink);outline:none;cursor:text;white-space:pre-wrap;}
+.op2-card__in:empty::before{content:attr(data-ph);color:#B5B5B5;}
+.op2-card__in:focus{background:#fff;border-radius:calc(0.4*var(--u));box-shadow:0 0 0 2px var(--green-primary);}
+
+/* ---- 結論三頁 ---- */
+.cl1{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1.05fr;gap:calc(2.4*var(--u));align-items:center;margin-top:calc(0.4*var(--u));}
+.cl1__left{display:flex;flex-direction:column;gap:calc(1.4*var(--u));min-width:0;}
+.cl1__me{display:flex;align-items:center;gap:calc(1.6*var(--u));}
+.cl1__circle{flex:0 0 auto;width:calc(8*var(--u));height:calc(8*var(--u));border-radius:50%;background:var(--green-dark);color:#fff;display:flex;align-items:center;justify-content:center;font-size:calc(3.2*var(--u));font-weight:900;}
+.cl1__saywrap{display:flex;flex-direction:column;gap:calc(0.5*var(--u));}
+.cl1__say{font-size:calc(1.95*var(--u));line-height:1.5;color:var(--ink);}
+.cl1__say b{font-weight:900;color:var(--red, #B8412E);}
+.cl1__sub{font-size:calc(1.6*var(--u));font-weight:900;color:var(--green-dark);}
+.cl1__grow{background:var(--paper-warm);border-radius:var(--radius-md);padding:calc(1.2*var(--u)) calc(1.8*var(--u));}
+.cl1__t{font-size:calc(1.35*var(--u));font-weight:900;letter-spacing:0.14em;color:var(--mid-gray);margin-bottom:calc(0.6*var(--u));}
+.cl1__stats{display:flex;flex-direction:column;gap:calc(0.35*var(--u));}
+.cl1__s{display:flex;align-items:baseline;gap:calc(1.2*var(--u));border-bottom:1px solid rgba(0,0,0,0.06);padding:calc(0.2*var(--u)) 0;}
+.cl1__s:last-child{border-bottom:0;}
+.cl1__n{font-size:calc(2.05*var(--u));font-weight:900;color:var(--green-dark);line-height:1.2;white-space:nowrap;}
+.cl1__l{font-size:calc(1.35*var(--u));color:var(--mid-gray);}
+.cl1__img{min-height:0;height:100%;display:flex;align-items:center;justify-content:center;}
+.cl1__img img{max-width:100%;max-height:calc(46*var(--u));border-radius:var(--radius-md);object-fit:contain;}
+.cl2__lead{font-size:calc(2.2*var(--u));font-weight:700;color:var(--ink);margin-top:calc(0.2*var(--u));}
+.cl2{flex:1;min-height:0;display:grid;grid-template-columns:repeat(5,1fr);gap:calc(1.2*var(--u));align-items:stretch;margin-top:calc(1*var(--u));}
+.cl2__i{background:var(--paper-warm);border-top:calc(0.5*var(--u)) solid var(--green-primary);border-radius:0 0 var(--radius-md) var(--radius-md);padding:calc(1.1*var(--u)) calc(1.2*var(--u));display:flex;flex-direction:column;gap:calc(0.5*var(--u));}
+.cl2__m{font-size:calc(1.3*var(--u));font-weight:900;letter-spacing:0.14em;color:var(--green-primary);}
+.cl2__e{font-size:calc(2.1*var(--u));font-weight:900;color:var(--ink);line-height:1.25;}
+.cl2__d{font-size:calc(1.55*var(--u));line-height:1.5;color:var(--ink);margin-top:calc(0.3*var(--u));}
+.cl2__w{font-size:calc(1.35*var(--u));color:var(--mid-gray);margin-top:auto;padding-top:calc(0.8*var(--u));border-top:1px solid rgba(0,0,0,0.08);}
+.cl3{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1.1fr;gap:calc(2.4*var(--u));align-items:center;margin-top:calc(0.4*var(--u));}
+.cl3__txt{display:flex;flex-direction:column;gap:calc(1.4*var(--u));}
+.cl3__q{font-size:calc(2.6*var(--u));font-weight:900;line-height:1.4;color:var(--green-dark);}
+.cl3__p{font-size:calc(1.9*var(--u));line-height:1.5;color:var(--ink);}
+.cl3__p--hi{font-weight:900;color:var(--green-dark);}
+.cl3__list{display:flex;flex-direction:column;}
+.cl3__row{display:flex;align-items:baseline;gap:calc(1.2*var(--u));padding:calc(0.55*var(--u)) 0;border-bottom:1px solid rgba(0,0,0,0.08);}
+.cl3__row:last-child{border-bottom:0;}
+.cl3__m{flex:0 0 calc(7*var(--u));font-size:calc(1.35*var(--u));font-weight:900;letter-spacing:0.12em;color:var(--green-primary);}
+.cl3__e{font-size:calc(2*var(--u));font-weight:900;color:var(--ink);}
+.cl3__img{min-height:0;height:100%;display:flex;align-items:center;justify-content:center;}
+.cl3__img img{max-width:100%;max-height:calc(44*var(--u));border-radius:var(--radius-md);object-fit:contain;}
+/* 一句話模式：文字剩 ≤30 字時，字放大、圖放大（工具依字數標 data-tier） */
+.cl3:has(.cl3__txt[data-tier="s"]){grid-template-columns:1fr 1.15fr;}
+.cl3__txt[data-tier="s"]{gap:calc(2*var(--u));}
+.cl3__txt[data-tier="s"] .cl3__q{font-size:calc(3.6*var(--u));line-height:1.35;}
+.cl3__txt[data-tier="s"] .cl3__p{font-size:calc(2.8*var(--u));line-height:1.45;}
+.cl3__txt[data-tier="m"] .cl3__q{font-size:calc(3*var(--u));}
+.cl3__txt[data-tier="m"] .cl3__p{font-size:calc(2.6*var(--u));}
+.cl3:has(.cl3__txt[data-tier="s"]) .cl3__img img,.cl3:has(.cl3__txt[data-tier="m"]) .cl3__img img{max-height:calc(52*var(--u));}
+
+/* ---- P12 市場地圖 熱區 ---- */
+.mx-hot{cursor:pointer;transition:filter .2s ease;outline:none;}
+.mx-hot:hover{filter:drop-shadow(0 0 6px #E8FF3A) drop-shadow(0 0 18px rgba(232,255,58,0.75));}
+
+/* ---- P41 結語：全幅路景＋引言 ---- */
+.qt-page{isolation:isolate;}
+.qt-page .qt__bg{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:center top;z-index:-1;}
+.qt{justify-content:center;align-items:flex-start;}
+.qt__txt{display:flex;flex-direction:column;gap:calc(1.2*var(--u));max-width:52%;}
+.qt__q{font-size:calc(3.0*var(--u));font-weight:900;line-height:1.5;color:var(--ink);}
+.qt__by{font-size:calc(1.7*var(--u));font-weight:700;color:var(--mid-gray);letter-spacing:0.08em;}
+.qt__add{margin-top:calc(1.4*var(--u));}
+.qt__add-l{font-size:calc(1.4*var(--u));font-weight:900;letter-spacing:0.14em;color:var(--green-dark);margin-bottom:calc(0.6*var(--u));}
+.qt__add-t{display:inline-block;font-size:calc(3.8*var(--u));font-weight:900;line-height:1.25;color:#FFFFFF;background:var(--green-dark);padding:calc(0.5*var(--u)) calc(1.4*var(--u));border-radius:var(--radius-sm);}
+
+/* ---- P16 合辦方案 ---- */
+.offer{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:calc(1.8*var(--u));margin-top:calc(0.6*var(--u));align-items:start;}
+.offer__col{background:var(--paper-warm);border-radius:var(--radius-md);padding:0 calc(1.6*var(--u)) calc(1.2*var(--u));display:flex;flex-direction:column;overflow:hidden;}
+.offer__head{margin:0 calc(-1.6*var(--u)) calc(0.8*var(--u));padding:calc(0.7*var(--u)) calc(1.6*var(--u));font-size:calc(1.9*var(--u));font-weight:900;letter-spacing:0.08em;color:#fff;background:var(--green-dark);}
+.offer__col--opt .offer__head{background:var(--green-primary);}
+.offer__col--them .offer__head{background:#8A8A8A;}
+.offer__col--them{background:#F4F4F4;}
+.offer__row{display:grid;grid-template-columns:1fr auto;grid-template-areas:"k p" "s p";column-gap:calc(1*var(--u));align-items:baseline;padding:calc(0.85*var(--u)) 0;border-bottom:1px solid rgba(0,0,0,0.08);}
+.offer__row:last-child{border-bottom:0;}
+.offer__k{grid-area:k;font-size:calc(2.4*var(--u));font-weight:900;color:var(--ink);line-height:1.25;}
+.offer__s{grid-area:s;font-size:calc(1.35*var(--u));color:var(--mid-gray);line-height:1.4;min-height:calc(1.2*var(--u));}
+.offer__p{grid-area:p;align-self:center;font-size:calc(2*var(--u));font-weight:900;color:var(--green-dark);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.offer__col--them .offer__p{display:none;}
+.offer-where{display:grid;grid-template-columns:1.35fr 1fr;gap:calc(1.2*var(--u));margin-top:auto;padding-top:calc(1.2*var(--u));}
+.offer-where__cell{display:flex;align-items:baseline;gap:calc(1.2*var(--u));background:var(--green-dark);border-radius:var(--radius-sm);padding:calc(0.9*var(--u)) calc(1.6*var(--u));}
+.offer-where__l{font-size:calc(1.25*var(--u));font-weight:900;letter-spacing:0.12em;color:var(--hi-yellow);white-space:nowrap;}
+.offer-where__v{font-size:calc(1.6*var(--u));font-weight:700;color:#fff;line-height:1.45;}
+.offer-where__v b{color:var(--hi-yellow);font-weight:900;white-space:nowrap;}
+
+/* ---- P6 薪資（2026-09-13 版） ---- */
+.pay2{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(1.6*var(--u));margin-top:calc(0.4*var(--u));}
+.pay2__c{background:var(--paper-warm);border-radius:var(--radius-md);padding:calc(1*var(--u)) calc(1.6*var(--u)) calc(1.1*var(--u));}
+.pay2__c--hi{background:var(--green-dark);}
+.pay2__c--hi .pay2__t,.pay2__c--hi .pay2__s{color:rgba(255,255,255,0.8);}
+.pay2__c--hi .pay2__a{color:rgba(255,255,255,0.7);}
+.pay2__c--hi .pay2__b,.pay2__c--hi .pay2__ar{color:var(--hi-yellow);}
+.pay2__t{font-size:calc(1.3*var(--u));font-weight:900;letter-spacing:0.14em;color:var(--mid-gray);}
+.pay2__v{display:flex;align-items:baseline;gap:calc(0.7*var(--u));margin-top:calc(0.3*var(--u));font-variant-numeric:tabular-nums;}
+.pay2__a{font-size:calc(2.6*var(--u));font-weight:700;color:var(--mid-gray);}
+.pay2__ar{font-size:calc(2.2*var(--u));font-weight:900;color:var(--green-primary);}
+.pay2__b{font-size:calc(3.8*var(--u));font-weight:900;color:var(--green-dark);line-height:1;}
+.pay2__v small{font-size:calc(1.5*var(--u));font-weight:900;color:var(--mid-gray);}
+.pay2__s{font-size:calc(1.45*var(--u));color:var(--mid-gray);margin-top:calc(0.3*var(--u));}
+.pay2__s b{color:var(--green-dark);font-weight:900;}
+
+/* ---- S6 薪資（舊版，未使用） ---- */
+.pay{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(2.5*var(--u));margin-top:calc(1*var(--u));}
+.pay__col{background:var(--paper-warm);border-radius:var(--radius-md);padding:calc(1.6*var(--u)) calc(2*var(--u));display:flex;flex-direction:column;gap:calc(0.9*var(--u));}
+.pay__col--blank{background:#fff;border:2px dashed #C9C9C9;}
+.pay__title{font-size:calc(1.3*var(--u));font-weight:700;letter-spacing:0.2em;color:var(--green-primary);}
+.pay__pair{display:flex;align-items:baseline;justify-content:space-between;gap:calc(1*var(--u));}
+.pay__yr{font-size:calc(1.5*var(--u));color:var(--mid-gray);}
+.pay__val{font-size:calc(3.2*var(--u));font-weight:900;color:var(--ink);line-height:1.1;font-variant-numeric:tabular-nums;}
+.pay__val .unit{font-size:calc(1.4*var(--u));margin-left:calc(0.3*var(--u));color:var(--mid-gray);font-weight:700;}
+.pay__val--now{color:var(--green-dark);}
+.pay__delta{margin-top:auto;align-self:flex-end;font-size:calc(2.6*var(--u));font-weight:900;color:var(--green-dark);}
+.pay__delta--blank{color:#B5B5B5;font-size:calc(1.6*var(--u));}
+.ph-num{display:inline-block;min-width:calc(7*var(--u));padding:calc(0.2*var(--u)) calc(0.8*var(--u));border:2px dashed #C9C9C9;border-radius:calc(0.5*var(--u));color:#B5B5B5;font-size:calc(1.6*var(--u));font-weight:700;text-align:center;vertical-align:middle;}
+.pay__line{margin-top:calc(2.2*var(--u));font-size:calc(2.1*var(--u));font-weight:700;color:var(--ink);}
+.pay__line .ph-num{font-size:calc(1.6*var(--u));}
+
+
+/* 六都中高年級表 */
+.c2-mt{width:100%;border-collapse:collapse;font-size:calc(1.65*var(--u));color:var(--ink);margin-top:calc(0.4*var(--u));}
+.c2-mt th,.c2-mt td{padding:calc(0.36*var(--u)) calc(0.5*var(--u));border-bottom:1px solid #EAEAEA;line-height:1.3;}
+.c2-mt thead th{font-size:calc(1.55*var(--u));font-weight:900;color:var(--ink);text-align:center;border-bottom:2px solid var(--green-primary);}
+.c2-mt thead th .yr{display:block;font-size:calc(1.05*var(--u));font-weight:500;color:var(--mid-gray);}
+.c2-mt .num{text-align:right;font-variant-numeric:tabular-nums;}
+.c2-mt .pct{font-size:calc(1.45*var(--u));color:var(--mid-gray);padding-right:calc(1*var(--u));}
+.c2-mt__name{font-weight:700;white-space:nowrap;}
+.c2-mt__hot td{background:var(--paper-warm);}
+.c2-mt__hot .c2-mt__name{color:var(--green-dark);font-weight:900;}
+.c2-mt__hot .pct{color:#B8412E;font-weight:900;}
+.c2-mt__sum td{border-top:2px solid #CFCFCF;font-weight:700;}
+.c2-mt__hc td{border-top:1px dashed #CFCFCF;color:var(--mid-gray);}
+.c2-mt__hc .c2-mt__name{color:var(--ink);font-weight:700;}
+.c2-mt__nat td{border-top:2px solid var(--ink);font-weight:900;}
+.c2-mt__nat .pct{color:var(--ink);}
+
+.c2-mt__band{display:flex;align-items:baseline;gap:calc(1.4*var(--u));background:var(--green-dark);border-radius:var(--radius-sm);padding:calc(0.7*var(--u)) calc(1.5*var(--u));margin-top:auto;padding-top:calc(0.7*var(--u));margin-bottom:0;--x:calc(1*var(--u));}
+.c2-mt__band-l{font-size:calc(1.3*var(--u));font-weight:700;letter-spacing:0.1em;color:rgba(255,255,255,0.75);}
+.c2-mt__band-v{font-size:calc(2.1*var(--u));font-weight:900;color:#fff;font-variant-numeric:tabular-nums;}
+.c2-mt__band-p{font-size:calc(2.4*var(--u));font-weight:900;color:var(--hi-yellow);}
+.c2-mt__band-n{font-size:calc(1.2*var(--u));color:rgba(255,255,255,0.7);margin-left:auto;text-align:right;}
+
+/* ===== CH2 少子化（P7–P11）。尺寸一律 calc(N*var(--u))。 ===== */
+
+/* ---- P7 章節頁（kit chapter 版型；letterbox bleed 靠 base.css 的 .probe-chapter 規則）---- */
+.probe-chapter{padding:0;flex-direction:row;}
+.probe-chapter__left{width:38%;background:var(--green-primary);display:flex;align-items:flex-end;justify-content:flex-end;padding:calc(5*var(--u));overflow:hidden;}
+.probe-chapter__num{font-size:var(--fs-chapter-num);font-weight:900;color:rgba(255,255,255,0.18);line-height:0.82;letter-spacing:-0.04em;user-select:none;}
+.probe-chapter__left--img{padding:0;position:relative;align-items:flex-start;justify-content:flex-end;}
+.probe-chapter__img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:center;}
+.probe-chapter__num--stamp{position:relative;font-size:calc(3.4*var(--u));color:var(--paper-warm);background:var(--green-dark);letter-spacing:0.02em;line-height:1;padding:calc(0.7*var(--u)) calc(1.3*var(--u));border-radius:100vw;margin:calc(2.2*var(--u)) calc(2.4*var(--u)) 0 0;}
+.probe-chapter__right{flex:1;display:flex;flex-direction:column;justify-content:center;padding:calc(5*var(--u)) calc(7*var(--u)) calc(5*var(--u)) calc(6*var(--u));}
+.probe-chapter__label{font-size:var(--fs-label);font-weight:700;letter-spacing:0.3em;color:var(--green-primary);margin-bottom:calc(1*var(--u));}
+.probe-chapter__title{font-size:var(--fs-chapter-title);font-weight:900;color:var(--ink);line-height:1.2;border-top:3px solid var(--green-primary);padding-top:calc(1.8*var(--u));}
+.probe-chapter__sub{font-size:calc(2*var(--u));font-weight:500;color:var(--mid-gray);line-height:1.7;margin-top:calc(1.8*var(--u));}
+
+/* ---- P8 出生數曲線 ---- */
+.c2-cal{display:grid;grid-template-columns:1fr 1fr;gap:calc(2.2*var(--u));margin-top:calc(1.4*var(--u));}
+.c2-cal__item{background:var(--paper-warm);border-radius:var(--radius-md);border:2px solid var(--paper-warm);padding:calc(0.9*var(--u)) calc(1.6*var(--u));display:flex;align-items:center;gap:calc(1.4*var(--u));}
+.c2-cal__item--warn{background:#FFFFFF;border-color:#B8412E;}
+.c2-cal__big{font-size:calc(3.5*var(--u));font-weight:900;color:var(--green-dark);line-height:1.1;white-space:nowrap;font-variant-numeric:tabular-nums;}
+.c2-cal__big--warn{color:#B8412E;}
+.c2-cal__u{font-size:calc(1.6*var(--u));margin-left:calc(0.2*var(--u));}
+.c2-cal__txt{font-size:calc(2*var(--u));line-height:1.5;color:var(--ink);}
+.c2-cal__txt b{font-weight:900;color:var(--green-dark);}
+.c2-cal__txt--warn b{color:#B8412E;}
+
+/* ---- P9 我們的客群 ---- */
+.c2-two{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1fr;gap:calc(2.4*var(--u));}
+.c2-col{min-height:0;background:var(--paper-warm);border-top:3px solid var(--green-primary);border-radius:0 0 var(--radius-md) var(--radius-md);padding:calc(1.3*var(--u)) calc(1.6*var(--u));display:flex;flex-direction:column;}
+.c2-col__head{display:flex;align-items:center;justify-content:space-between;gap:calc(1*var(--u));}
+.c2-col__lab{font-size:calc(2.2*var(--u));font-weight:900;color:var(--ink);white-space:nowrap;}
+.c2-badge{font-size:calc(1.95*var(--u));font-weight:900;color:#FFFFFF;background:var(--green-dark);border-radius:calc(3*var(--u));padding:calc(0.2*var(--u)) calc(1*var(--u));white-space:nowrap;}
+.c2-chart{flex:1;min-height:0;display:flex;margin-top:calc(0.5*var(--u));}
+.c2-chart svg{width:100%;height:100%;}
+.c2-col__note{font-size:calc(2*var(--u));line-height:1.5;color:var(--ink);margin-top:calc(0.5*var(--u));}
+.c2-col__note b{font-weight:900;color:var(--green-dark);}
+.c2-strip{display:flex;align-items:center;gap:calc(1.8*var(--u));background:var(--green-dark);border-radius:var(--radius-md);padding:calc(0.9*var(--u)) calc(2*var(--u));margin-top:calc(1.4*var(--u));}
+.c2-strip__k{font-size:calc(1.35*var(--u));font-weight:700;letter-spacing:0.2em;color:var(--hi-yellow);white-space:nowrap;}
+.c2-strip__v{font-size:calc(2.1*var(--u));font-weight:700;color:#FFFFFF;line-height:1.4;}
+.c2-strip__v b{font-weight:900;color:var(--hi-yellow);}
+
+/* ---- P10 三層意涵 ---- */
+.c2-cards{flex:1;min-height:0;display:grid;grid-template-columns:1fr 1.22fr 0.92fr;gap:calc(2.2*var(--u));}
+.c2-card{min-height:0;background:var(--paper-warm);border-top:3px solid var(--green-primary);border-radius:0 0 var(--radius-md) var(--radius-md);padding:calc(1.3*var(--u)) calc(1.7*var(--u)) calc(1.5*var(--u));display:flex;flex-direction:column;}
+.c2-card--warn{border-top-color:#B8412E;}
+.c2-card__no{font-size:calc(1.3*var(--u));font-weight:700;letter-spacing:0.3em;color:var(--green-primary);}
+.c2-card--warn .c2-card__no{color:#B8412E;}
+.c2-card__t{font-size:calc(2.35*var(--u));font-weight:900;color:var(--ink);line-height:1.3;margin-top:calc(0.2*var(--u));}
+.c2-card__b{font-size:calc(2*var(--u));line-height:1.55;color:var(--ink);margin-top:calc(0.7*var(--u));}
+.c2-card__b b{font-weight:900;color:var(--green-dark);}
+.c2-stats{margin-top:auto;padding-top:calc(1*var(--u));display:flex;flex-direction:column;gap:calc(0.7*var(--u));}
+.c2-stat__k{font-size:calc(1.25*var(--u));font-weight:700;letter-spacing:0.04em;color:var(--mid-gray);}
+.c2-stat__v{display:flex;flex-wrap:wrap;align-items:baseline;gap:calc(0.2*var(--u)) calc(0.7*var(--u));font-size:calc(2.05*var(--u));font-weight:900;color:var(--green-dark);font-variant-numeric:tabular-nums;line-height:1.2;}
+.c2-stat__d{font-size:calc(1.45*var(--u));font-weight:900;color:#FFFFFF;background:var(--green-primary);border-radius:calc(0.4*var(--u));padding:0 calc(0.6*var(--u));}
+
+/* ---- P11 結論（深綠滿版；letterbox bleed 靠 base.css 的 .probe-breather 規則）---- */
+.probe-breather .page-label,.probe-breather .page-label__num{color:rgba(255,255,255,0.7);}
+.probe-breather .page-label__num{background:rgba(255,255,255,0.22);color:#FFFFFF;}
+.probe-breather .page-label__bar{background:rgba(255,255,255,0.35);}
+.probe-breather .brand-footer .brand-logo{color:rgba(255,255,255,0.55);}
+.c2-close{justify-content:center;align-items:flex-start;}
+.probe-breather{isolation:isolate;}
+.c2-close__img{position:absolute;left:0;top:0;width:100%;height:100%;object-fit:contain;object-position:center;z-index:-1;}
+
+.c2-close__eye{font-size:calc(1.35*var(--u));font-weight:700;letter-spacing:0.3em;color:var(--hi-yellow);}
+.c2-close__big{font-size:calc(5.2*var(--u));font-weight:900;color:#FFFFFF;line-height:1.32;}   /* 老師 2026-09-17：黃色橫線與黃字（CHAPTER 標）拿掉 */
+.c2-close__big .hi{color:var(--ink);}
+.c2-close__line{font-size:calc(2.7*var(--u));font-weight:700;color:rgba(255,255,255,0.85);margin-top:calc(2.8*var(--u));}
+.c2-close__next{font-size:calc(2*var(--u));font-weight:500;color:rgba(255,255,255,0.5);letter-spacing:0.08em;margin-top:calc(1.2*var(--u));}
+
+
+/* ===== CH3 前半 授權・數位・海外（P12–P17）。尺寸一律 calc(N*var(--u))。 ===== */
+
+/* ---- 共用：深綠橫帶、兩欄骨架、圖框、待收佔位 ---- */
+.c3-strip{display:flex;align-items:center;gap:calc(1.8*var(--u));background:var(--green-dark);border-radius:var(--radius-md);padding:calc(0.85*var(--u)) calc(2*var(--u));margin-top:calc(1.3*var(--u));}
+.c3-strip__k{font-size:calc(1.35*var(--u));font-weight:700;letter-spacing:0.2em;color:var(--hi-yellow);white-space:nowrap;}
+.c3-strip__v{font-size:calc(2.05*var(--u));font-weight:700;color:#FFFFFF;line-height:1.4;}
+.c3-strip__v b{font-weight:900;color:var(--hi-yellow);}
+.c3-two{flex:1;min-height:0;display:grid;gap:calc(3*var(--u));}
+.c3-two>*{min-height:0;}
+.c3-two--lic{grid-template-columns:1.4fr 0.75fr;}
+.c3-two--dig{grid-template-columns:1.15fr 0.85fr;}
+.c3-fig{flex:1;min-height:0;display:flex;}
+.c3-fig svg{width:100%;height:100%;}
+.c3-tbc{display:inline-block;padding:0 calc(0.6*var(--u));border:2px dashed #C9C9C9;border-radius:calc(0.4*var(--u));color:#B5B5B5;font-size:calc(1.5*var(--u));font-weight:700;white-space:nowrap;}
+
+/* ---- P14 授權 ---- */
+.c3-lcol{display:flex;flex-direction:column;min-height:0;}
+.c3-def{font-size:calc(2.5*var(--u));font-weight:900;color:var(--green-dark);line-height:1.5;}
+.c3-rows{flex:1;min-height:0;display:flex;flex-direction:column;gap:calc(1.2*var(--u));margin-top:calc(1.4*var(--u));}
+.c3-row{flex:1;min-height:0;display:flex;align-items:center;gap:calc(1.2*var(--u));background:var(--paper-warm);border-left:4px solid var(--green-primary);border-radius:0 var(--radius-md) var(--radius-md) 0;padding:calc(0.9*var(--u)) calc(1.4*var(--u));}
+.c3-row__k{width:calc(12*var(--u));flex:none;font-size:calc(2.3*var(--u));font-weight:900;color:var(--ink);line-height:1.25;}
+.c3-row__v{font-size:calc(2*var(--u));line-height:1.5;color:var(--ink);}
+.c3-row__v b{font-weight:900;color:var(--green-dark);}
+.c3-scol{display:flex;flex-direction:column;min-height:0;}
+.c3-note{font-size:calc(2.05*var(--u));font-weight:700;line-height:1.5;color:var(--ink);margin-top:calc(1*var(--u));}
+.c3-note b{font-weight:900;color:var(--green-dark);}
+
+/* ---- P15 數位 ---- */
+.c3-stack{display:flex;flex-direction:column;gap:calc(1.4*var(--u));min-height:0;}
+.c3-box{flex:1;min-height:0;background:var(--paper-warm);border-top:3px solid var(--green-primary);border-radius:0 0 var(--radius-md) var(--radius-md);padding:calc(0.8*var(--u)) calc(1.4*var(--u));display:flex;flex-direction:column;}
+.c3-box__t{font-size:calc(2.1*var(--u));font-weight:900;color:var(--ink);line-height:1.25;}
+.c3-box__b{font-size:calc(2*var(--u));line-height:1.42;color:var(--ink);margin-top:calc(0.35*var(--u));}
+.c3-box__b b{font-weight:900;color:var(--green-dark);}
+
+/* ---- P16 海外 ---- */
+.c3-cards{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:calc(2.2*var(--u));}
+.c3-card{min-height:0;background:var(--paper-warm);border-top:3px solid var(--green-primary);border-radius:0 0 var(--radius-md) var(--radius-md);padding:calc(1.1*var(--u)) calc(1.4*var(--u)) calc(1.3*var(--u));display:flex;flex-direction:column;}
+.c3-card__no{font-size:calc(1.3*var(--u));font-weight:700;letter-spacing:0.3em;color:var(--green-primary);}
+.c3-card__t{font-size:calc(2.4*var(--u));font-weight:900;color:var(--ink);line-height:1.25;margin-top:calc(0.1*var(--u));}
+.c3-card__b{font-size:calc(2*var(--u));line-height:1.5;color:var(--ink);margin-top:calc(0.6*var(--u));}
+.c3-card__b b{font-weight:900;color:var(--green-dark);}
+.c3-seq{margin-top:auto;padding-top:calc(0.9*var(--u));display:grid;grid-template-columns:1fr 1fr;gap:calc(0.5*var(--u)) calc(0.8*var(--u));}
+.c3-seq__y{font-size:calc(1.25*var(--u));font-weight:700;color:var(--mid-gray);letter-spacing:0.04em;}
+.c3-seq__v{font-size:calc(2.1*var(--u));font-weight:900;color:var(--green-dark);line-height:1.15;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.c3-seq__v small{font-size:calc(1.4*var(--u));font-weight:700;color:var(--mid-gray);margin-left:calc(0.2*var(--u));}
+.c3-bdg{font-size:calc(1.4*var(--u));font-weight:900;color:#FFFFFF;background:var(--green-primary);border-radius:calc(0.4*var(--u));padding:0 calc(0.55*var(--u));margin-left:calc(0.5*var(--u));}
+
+/* ---- P17 三者是同一件事 ---- */
+.c3-bridge{display:flex;align-items:baseline;justify-content:space-between;gap:calc(2*var(--u));background:var(--green-dark);border-radius:var(--radius-md);padding:calc(1.2*var(--u)) calc(2.4*var(--u));margin-top:calc(1.4*var(--u));}
+.c3-bridge__q{font-size:calc(2.8*var(--u));font-weight:900;color:#FFFFFF;line-height:1.3;}
+.c3-bridge__n{font-size:calc(1.9*var(--u));font-weight:500;color:rgba(255,255,255,0.55);letter-spacing:0.08em;white-space:nowrap;}
+
+
+/* ---- P17 NUMiNAI 第一頁（NUMiNAI 視覺・白底） ---- */
+.nm-light{font-family:'Chiron GoRound TC','Noto Sans TC',sans-serif;}
+.nm-light .hero{border-top-color:#0AACA3;}
+.nm-light .page-label__num{background:#097881;}
+.d0-body{flex:1;min-height:0;display:grid;grid-template-columns:calc(38*var(--u)) 1fr;gap:calc(3*var(--u));align-items:center;margin-top:calc(0.4*var(--u));}
+.d0-fig{height:100%;min-height:0;display:flex;align-items:center;justify-content:center;}
+.d0-fig svg{width:100%;height:100%;max-height:calc(46*var(--u));}
+.d0-side{display:flex;flex-direction:column;gap:calc(1.4*var(--u));}
+.d0-kpi{display:flex;align-items:baseline;gap:calc(1.2*var(--u));border-left:calc(0.6*var(--u)) solid #0AACA3;padding-left:calc(1.6*var(--u));}
+.d0-kpi__n{font-size:calc(6*var(--u));font-weight:900;color:#097881;line-height:1;letter-spacing:0.01em;}
+.d0-kpi__n small{font-size:calc(2.4*var(--u));margin-left:calc(0.2*var(--u));}
+.d0-kpi__l{font-size:calc(1.9*var(--u));font-weight:700;color:#3B817C;}
+.d0-card{background:#ECF8F6;border-radius:var(--radius-md);padding:calc(1.3*var(--u)) calc(1.8*var(--u));}
+.d0-card__t{font-size:calc(2.3*var(--u));font-weight:900;color:#06565C;line-height:1.25;}
+.d0-card__b{font-size:calc(1.75*var(--u));color:#1E1E1E;line-height:1.5;margin-top:calc(0.4*var(--u));}
+.d0-card__b b{font-weight:900;color:#097881;}
+
+
+/* ---- P17 NUMiNAI 上線（NUMiNAI 視覺） ---- */
+.nm-page{background:#06565C;font-family:'Chiron GoRound TC','Noto Sans TC',sans-serif;}
+.nm-page .page-label{color:rgba(255,255,255,0.78);}
+.nm-page .page-label__num{background:#82D3C6;color:#06565C;}
+.nm-page .page-label__bar{background:rgba(255,255,255,0.4);}
+.nm-page .brand-footer .brand-logo{color:rgba(255,255,255,0.6);}
+.nm-head{display:flex;align-items:flex-end;justify-content:space-between;gap:calc(2*var(--u));border-top:3px solid #82D3C6;padding-top:calc(1.4*var(--u));}
+.nm-title{font-size:calc(4.4*var(--u));font-weight:900;color:#FFFFFF;line-height:1.1;letter-spacing:0.02em;}
+.nm-sub{font-size:calc(1.7*var(--u));color:#C0E9E2;margin-top:calc(0.7*var(--u));}
+.nm-wordmark{display:block;height:calc(5.2*var(--u));width:auto;margin-bottom:calc(0.4*var(--u));}
+.nm-body{flex:1;min-height:0;display:grid;grid-template-columns:1fr calc(19*var(--u));gap:calc(2.4*var(--u));align-items:center;margin-top:calc(1.5*var(--u));}
+.nm-lead{font-size:calc(1.3*var(--u));font-weight:900;letter-spacing:0.18em;color:#82D3C6;margin-bottom:calc(0.9*var(--u));}
+.nm-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(1.5*var(--u));}
+.nm-card{background:#ECF8F6;border-radius:var(--radius-md);padding:calc(1.3*var(--u)) calc(1.5*var(--u)) calc(1.5*var(--u));display:flex;flex-direction:column;gap:calc(0.4*var(--u));min-height:calc(15*var(--u));}
+.nm-card__no{font-size:calc(1.2*var(--u));font-weight:900;letter-spacing:0.18em;color:#0AACA3;}
+.nm-card__t{font-size:calc(2.7*var(--u));font-weight:900;color:#06565C;line-height:1.25;}
+.nm-card__s{font-size:calc(2*var(--u));color:#3B817C;line-height:1.5;margin-top:auto;}
+.nm-mascot{display:block;width:calc(17*var(--u));height:auto;justify-self:center;}
+.nm-goal{display:flex;align-items:baseline;gap:calc(1.6*var(--u));background:rgba(255,255,255,0.08);border:2px solid rgba(130,211,198,0.5);border-radius:var(--radius-sm);padding:calc(0.8*var(--u)) calc(1.8*var(--u));margin-top:calc(1.2*var(--u));}
+.nm-goal__l{font-size:calc(1.25*var(--u));font-weight:900;letter-spacing:0.12em;color:#82D3C6;white-space:nowrap;}
+.nm-goal__n{font-size:calc(5*var(--u));font-weight:900;color:#F3E43B;line-height:1;font-variant-numeric:tabular-nums;}
+.nm-goal__n small{font-size:calc(1.8*var(--u));margin-left:calc(0.3*var(--u));}
+.nm-goal__v{font-size:calc(1.9*var(--u));font-weight:700;color:#FFFFFF;}
+.nm-page .foot{color:rgba(255,255,255,0.55);}
+
+
+/* ---- P19 環繞 NUMiNAI 的三件事（NUMiNAI 視覺・白底） ---- */
+.ar-wrap{flex:1;min-height:0;display:grid;grid-template-columns:calc(28*var(--u)) 1fr;gap:calc(2.5*var(--u));align-items:center;margin-top:calc(0.4*var(--u));}
+.ar-core{width:calc(24*var(--u));aspect-ratio:1;border-radius:50%;background:#097881;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(0.8*var(--u));justify-self:center;box-shadow:0 0 0 calc(1.2*var(--u)) #C0E9E2;}
+.ar-core img{width:calc(16*var(--u));height:auto;display:block;}
+.ar-core__s{font-size:calc(1.3*var(--u));font-weight:700;color:#C0E9E2;letter-spacing:0.12em;}
+.ar-list{display:flex;flex-direction:column;gap:calc(1.3*var(--u));}
+.ar-card{display:grid;grid-template-columns:calc(4*var(--u)) 1fr;gap:calc(1.4*var(--u));align-items:start;background:#ECF8F6;border-radius:var(--radius-md);padding:calc(1.2*var(--u)) calc(1.8*var(--u)) calc(1.3*var(--u)) calc(1.4*var(--u));position:relative;}
+.ar-card::before{content:"";position:absolute;left:calc(-2.5*var(--u));top:50%;width:calc(2.5*var(--u));height:3px;background:#82D3C6;}
+.ar-card__no{font-size:calc(2.6*var(--u));font-weight:900;color:#0AACA3;line-height:1;padding-top:calc(0.2*var(--u));}
+.ar-card__t{font-size:calc(2.2*var(--u));font-weight:900;color:#06565C;line-height:1.25;}
+.ar-card__b{font-size:calc(1.7*var(--u));color:#1E1E1E;line-height:1.5;margin-top:calc(0.35*var(--u));}
+.ar-card__b b{font-weight:900;color:#097881;}
+
+
+/* ===== D1 把引擎拆出來＝三個出海口。尺寸一律 calc(N*var(--u))。 ===== */
+.d1-chart{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;}
+.d1-chart svg{width:100%;height:100%;}
+
+
+/* ---- P19 出卷、閱卷 ---- */
+.ex-two{display:grid;grid-template-columns:1fr auto 1fr;gap:calc(1.6*var(--u));align-items:stretch;margin-top:calc(0.4*var(--u));}
+.ex-card{border-radius:var(--radius-md);padding:calc(1.5*var(--u)) calc(2*var(--u)) calc(1.7*var(--u));display:flex;flex-direction:column;gap:calc(0.5*var(--u));}
+.ex-card--a{background:var(--green-dark);color:#fff;}
+.ex-card--b{background:#fff;border:3px solid var(--green-primary);}
+.ex-card__no{font-size:calc(1.2*var(--u));font-weight:900;letter-spacing:0.18em;color:rgba(255,255,255,0.75);}
+.ex-card--b .ex-card__no{color:var(--green-primary);}
+.ex-card__t{font-size:calc(3.2*var(--u));font-weight:900;line-height:1.2;}
+.ex-card--b .ex-card__t{color:var(--green-dark);}
+.ex-card__b{font-size:calc(1.85*var(--u));line-height:1.5;margin-top:calc(0.3*var(--u));}
+.ex-card[data-tier="s"] .ex-card__b{font-size:calc(2.3*var(--u));}
+.ex-card[data-tier="s"] .ex-card__t{font-size:calc(3.8*var(--u));}
+.ex-card--b .ex-card__b{color:var(--ink);}
+.ex-card__b b{font-weight:900;color:var(--hi-yellow);}
+.ex-card--b .ex-card__b b{color:var(--green-dark);}
+.ex-arrow{align-self:center;font-size:calc(3.4*var(--u));font-weight:900;color:var(--green-primary);}
+.ex-partner{margin-top:calc(1.2*var(--u));display:flex;align-items:baseline;gap:calc(1.2*var(--u));background:var(--paper-warm);border-left:calc(0.5*var(--u)) solid #A87C21;border-radius:var(--radius-sm);padding:calc(0.8*var(--u)) calc(1.6*var(--u));font-size:calc(1.8*var(--u));font-weight:700;color:var(--ink);line-height:1.45;}
+.ex-partner__l{font-size:calc(1.2*var(--u));font-weight:900;letter-spacing:0.14em;color:#A87C21;white-space:nowrap;}
+.ex-partner b{font-weight:900;color:#A87C21;}
+.ex-values{display:grid;grid-template-columns:1fr 1fr;gap:calc(1.2*var(--u));margin-top:calc(1.2*var(--u));}
+.ex-value{background:var(--green-dark);border-radius:var(--radius-sm);padding:calc(0.9*var(--u)) calc(1.6*var(--u));display:flex;align-items:baseline;gap:calc(1.2*var(--u));}
+.ex-value__l{font-size:calc(1.25*var(--u));font-weight:900;letter-spacing:0.12em;color:var(--hi-yellow);white-space:nowrap;}
+.ex-value__v{font-size:calc(1.7*var(--u));font-weight:700;color:#fff;line-height:1.4;}
+.ex-value__v b{color:var(--hi-yellow);font-weight:900;}
+
+
+/* ===== D4 出卷閱卷時程：沿用全域 .hero／.chart／.msask／.foot，本頁不另加 class。 ===== */
+
+
+/* ---- D6 班務系統：三張米白卡＋深綠帶（前綴 .cm-）---- */
+.cm-cols{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:calc(1.6*var(--u));align-items:stretch;}
+.cm-card{background:var(--paper-warm);border-top:calc(0.34*var(--u)) solid var(--green-dark);border-radius:var(--radius-md);
+  padding:calc(2.4*var(--u)) calc(1.7*var(--u));display:flex;flex-direction:column;min-height:0;}
+.cm-tag{align-self:flex-start;background:var(--green-dark);color:#FFFFFF;font-size:calc(1.6*var(--u));font-weight:900;
+  letter-spacing:0.1em;padding:calc(0.45*var(--u)) calc(1.25*var(--u));border-radius:var(--radius-sm);}
+/* 欄標題一律貼齊卡片頂端，剩下的空間再把內文垂直置中 */
+.cm-body{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;}
+.cm-b{font-size:calc(2*var(--u));line-height:1.6;color:var(--ink);}
+.cm-card[data-tier="s"] .cm-b{font-size:calc(2.5*var(--u));}
+.cm-card[data-tier="s"] .cm-b--lead{font-size:calc(2.7*var(--u));}
+.cm-card[data-tier="m"] .cm-b{font-size:calc(2.25*var(--u));}
+.cm-b+.cm-b{margin-top:calc(1.25*var(--u));}
+.cm-b b{font-weight:900;color:var(--green-dark);}
+.cm-b--lead{font-size:calc(2.1*var(--u));font-weight:900;color:var(--green-dark);line-height:1.4;}
+.cm-when{font-weight:900;color:var(--green-dark);margin-right:calc(0.85*var(--u));}
+
+
+/* ---- D5 數位轉型不是要你變工程師：三欄米白卡＋承諾帶 ---- */
+.d5-cols{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:calc(1.5*var(--u));align-items:stretch;}
+.d5-card{background:var(--paper-warm);border-top:calc(0.34*var(--u)) solid var(--green-dark);border-radius:var(--radius-md);
+  padding:calc(1.9*var(--u)) calc(1.15*var(--u)) calc(1.9*var(--u));display:flex;flex-direction:column;min-height:0;}
+.d5-h{font-size:calc(2.2*var(--u));font-weight:900;color:var(--green-dark);line-height:1.25;}
+.d5-rule{width:calc(4.4*var(--u));height:calc(0.3*var(--u));background:var(--green-primary);margin:calc(1.1*var(--u)) 0 0;}
+.d5-list{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:space-evenly;gap:calc(1.4*var(--u));}
+.d5-li{font-size:calc(1.9*var(--u));line-height:1.55;color:var(--ink);}
+.d5-li+.d5-li{border-top:calc(0.11*var(--u)) solid rgba(0,75,36,0.18);padding-top:calc(1.4*var(--u));}
+.d5-li b{font-weight:900;color:var(--green-dark);}
+.d5-tag{display:inline-flex;align-items:center;justify-content:center;
+  width:calc(2.9*var(--u));height:calc(2.7*var(--u));margin-right:calc(0.8*var(--u));
+  vertical-align:calc(-0.5*var(--u));
+  border-radius:var(--radius-sm);background:var(--green-dark);color:#FFFFFF;font-size:calc(1.9*var(--u));font-weight:900;}
+
+
+/* ===== CHAPTER 05 組織與人才（章節頁沿用 kit probe-chapter，不另寫）。尺寸一律 calc(N*var(--u))。 ===== */
+
+/* ---- 共用：兩欄骨架、標籤 ---- */
+.hr-two{flex:1;min-height:0;display:grid;gap:calc(2.6*var(--u));}
+.hr-two>*{min-height:0;}
+.hr-two--org{grid-template-columns:1.02fr 0.98fr;}
+.hr-two--pt{grid-template-columns:1.8fr 0.85fr;}
+.hr-tag{display:inline-block;font-size:calc(1.3*var(--u));font-weight:700;line-height:1.5;
+  padding:0 calc(0.5*var(--u));margin-left:calc(0.6*var(--u));border-radius:calc(0.35*var(--u));
+  background:#EEF6EE;border:calc(0.07*var(--u)) solid #CFE2D0;color:#6C8E6E;white-space:nowrap;vertical-align:calc(0.25*var(--u));}
+.hr-tag--new{background:var(--hi-yellow);border-color:#CFE026;color:var(--green-dark);font-weight:900;}
+
+/* ---- P 公共事務組：左編組卡（米白）＋右對象清單（白底＋左粗綠邊） ---- */
+.hr-card{background:var(--paper-warm);border-top:calc(0.34*var(--u)) solid var(--green-dark);
+  border-radius:var(--radius-md);padding:calc(1.5*var(--u)) calc(1.6*var(--u));display:flex;flex-direction:column;min-height:0;}
+.hr-card__t{font-size:calc(2.1*var(--u));font-weight:900;color:var(--green-dark);line-height:1.3;}
+.hr-card__s{font-size:calc(1.4*var(--u));color:var(--mid-gray);line-height:1.6;margin-top:calc(0.35*var(--u));}
+.hr-mems{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:space-evenly;margin-top:calc(0.6*var(--u));}
+.hr-mem{display:flex;align-items:baseline;gap:calc(1.1*var(--u));padding:calc(0.7*var(--u)) 0;}
+.hr-mem+.hr-mem{border-top:calc(0.07*var(--u)) solid rgba(0,75,36,0.16);}
+.hr-mem__k{width:calc(7.6*var(--u));flex:none;font-size:calc(1.45*var(--u));font-weight:900;letter-spacing:0.08em;
+  color:var(--green-primary);white-space:nowrap;}
+.hr-mem__v{font-size:calc(1.95*var(--u));line-height:1.35;color:var(--ink);}
+.hr-mem--new .hr-mem__k{color:var(--green-dark);}
+.hr-mem--new .hr-mem__v{font-weight:900;color:var(--green-dark);}
+.hr-scope{border-left:calc(0.34*var(--u)) solid var(--green-primary);padding:calc(0.2*var(--u)) 0 calc(0.2*var(--u)) calc(1.8*var(--u));
+  display:flex;flex-direction:column;min-height:0;}
+.hr-scope__t{font-size:calc(2.1*var(--u));font-weight:900;color:var(--ink);line-height:1.3;}
+.hr-scope__s{font-size:calc(1.4*var(--u));color:var(--mid-gray);line-height:1.6;margin-top:calc(0.35*var(--u));}
+.hr-list{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:space-evenly;margin-top:calc(0.6*var(--u));}
+.hr-li{font-size:calc(1.95*var(--u));line-height:1.35;color:var(--ink);padding:calc(0.7*var(--u)) 0;}
+.hr-list[data-n="3"] .hr-li,.hr-list[data-n="2"] .hr-li{font-size:calc(2.4*var(--u));padding:calc(1*var(--u)) 0;}
+.hr-list[data-n="3"] .hr-scope__t,.hr-list[data-n="2"] .hr-scope__t{font-size:calc(2.4*var(--u));}
+.hr-li+.hr-li{border-top:calc(0.07*var(--u)) solid #E6E6E6;}
+.hr-li b{font-weight:900;color:var(--green-dark);}
+
+/* ---- P 數位人才：上擴編條 ＋ 下三欄 ---- */
+.hr-exp{display:flex;align-items:stretch;gap:calc(1.5*var(--u));background:var(--paper-warm);
+  border-left:calc(0.34*var(--u)) solid var(--green-dark);border-radius:0 var(--radius-md) var(--radius-md) 0;
+  padding:calc(0.95*var(--u)) calc(1.5*var(--u));margin-bottom:calc(1.3*var(--u));}
+.hr-exp__k{flex:none;align-self:center;font-size:calc(1.8*var(--u));font-weight:900;color:var(--green-dark);
+  line-height:1.3;white-space:nowrap;}
+/* 注意：.hr-exp__i 是 flex 容器，內文一定要包在 <span> 裡——否則 <b> 會各自變成 flex item，句子會被拆行 */
+.hr-exp__i{flex:1;display:flex;align-items:center;border-left:calc(0.07*var(--u)) solid rgba(0,75,36,0.2);
+  padding-left:calc(1.5*var(--u));}
+.hr-exp__i>span{font-size:calc(1.62*var(--u));line-height:1.45;color:var(--ink);}
+.hr-exp__i b{font-weight:900;color:var(--green-dark);}
+.hr-cols{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:calc(1.5*var(--u));align-items:stretch;}
+.hr-col{background:var(--paper-warm);border-top:calc(0.34*var(--u)) solid var(--green-dark);border-radius:var(--radius-md);
+  padding:calc(1.35*var(--u)) calc(1.15*var(--u));display:flex;flex-direction:column;min-height:0;}
+.hr-h{font-size:calc(2.1*var(--u));font-weight:900;color:var(--green-dark);line-height:1.25;}
+.hr-rule{width:calc(4.4*var(--u));height:calc(0.3*var(--u));background:var(--green-primary);margin:calc(0.95*var(--u)) 0 0;}
+.hr-items{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:space-evenly;}
+.hr-item{font-size:calc(1.8*var(--u));line-height:1.5;color:var(--ink);padding:calc(0.9*var(--u)) 0;}
+/* 三欄剩兩欄／一欄：大卡模式（工具標 data-n） */
+.hr-cols[data-n="2"]{gap:calc(2.4*var(--u));}
+.hr-cols[data-n="2"] .hr-col{padding:calc(2.2*var(--u)) calc(2.6*var(--u));justify-content:center;}
+.hr-cols[data-n="2"] .hr-h{font-size:calc(2.8*var(--u));}
+.hr-cols[data-n="2"] .hr-item{font-size:calc(2.35*var(--u));padding:calc(1.4*var(--u)) 0;}
+.hr-cols[data-n="1"] .hr-h{font-size:calc(3.2*var(--u));}
+.hr-cols[data-n="1"] .hr-item{font-size:calc(2.6*var(--u));}
+.hr-item+.hr-item{border-top:calc(0.07*var(--u)) solid rgba(0,75,36,0.18);}
+.hr-item b{font-weight:900;color:var(--green-dark);}
+.hr-t{display:inline-flex;align-items:center;justify-content:center;width:calc(2.8*var(--u));height:calc(2.6*var(--u));
+  margin-right:calc(0.75*var(--u));vertical-align:calc(-0.45*var(--u));border-radius:var(--radius-sm);
+  background:var(--green-dark);color:#FFFFFF;font-size:calc(1.8*var(--u));font-weight:900;}
+
+/* ---- P 人力盤點：精簡表 ＋ 右側深綠帶 ---- */
+.hr-ptwrap{display:flex;flex-direction:column;justify-content:center;min-height:0;}
+.hr-pt{width:100%;border-collapse:collapse;font-size:calc(1.62*var(--u));color:var(--ink);}
+.hr-pt th,.hr-pt td{padding:calc(0.26*var(--u)) calc(0.9*var(--u));border-bottom:calc(0.07*var(--u)) solid #E6E6E6;
+  line-height:1.3;text-align:left;}
+.hr-pt thead th{font-size:calc(1.25*var(--u));font-weight:700;letter-spacing:0.08em;color:var(--mid-gray);
+  border-bottom:calc(0.14*var(--u)) solid var(--green-primary);white-space:nowrap;}
+.hr-pt .hr-n{text-align:right;font-variant-numeric:tabular-nums;font-weight:700;white-space:nowrap;width:calc(9*var(--u));}
+.hr-pt .hr-d{color:#B5B5B5;white-space:nowrap;}
+.hr-pt tr.hr-chg td{background:var(--paper-warm);}
+.hr-pt tr.hr-chg .hr-d{color:var(--green-dark);font-weight:900;}
+.hr-pt tr.hr-tot td{font-weight:900;border-top:calc(0.14*var(--u)) solid var(--ink);border-bottom:none;font-size:calc(1.85*var(--u));}
+.hr-pt tr.hr-tot .hr-d{color:var(--green-dark);font-size:calc(1.62*var(--u));}
+.msask.hr-band{flex-direction:column;align-items:flex-start;gap:calc(0.9*var(--u));align-self:center;
+  margin-top:0;border-radius:var(--radius-md);padding:calc(1.9*var(--u)) calc(1.8*var(--u));}
+.msask.hr-band .msask__q{font-size:calc(1.9*var(--u));line-height:1.55;}
+.msask.hr-band .msask__q b{color:var(--hi-yellow);font-weight:900;}
+
+
+/* ===== CH4 現有業務的拓展（章節頁＋大安校區）。章節頁沿用 kit probe-chapter，本章只加 .da-。 ===== */
+.da-main{flex:1;min-height:0;display:flex;flex-direction:column;gap:calc(1.6*var(--u));}
+
+/* ---- 四張校區卡橫排 ---- */
+.da-cards{flex:1;min-height:0;display:grid;grid-template-columns:repeat(4,1fr);gap:calc(1.6*var(--u));}
+.da-card{min-height:0;display:flex;flex-direction:column;background:#FFFFFF;
+  border:calc(0.1*var(--u)) solid #E6E1D8;border-top:calc(0.28*var(--u)) solid var(--green-primary);
+  border-radius:0 0 var(--radius-md) var(--radius-md);
+  padding:calc(1.2*var(--u)) calc(1.5*var(--u)) calc(1.3*var(--u));gap:calc(0.2*var(--u));}
+.da-card__hd{display:flex;align-items:center;gap:calc(0.7*var(--u));}
+.da-card__nm{font-size:calc(2.9*var(--u));font-weight:900;color:var(--ink);line-height:1.2;}
+.da-card__tag{font-size:calc(1.35*var(--u));font-weight:900;color:#FFFFFF;background:#7A9E7B;
+  border-radius:calc(0.3*var(--u));padding:0 calc(0.55*var(--u));white-space:nowrap;}
+.da-card__big{margin-top:calc(0.6*var(--u));font-size:calc(5.6*var(--u));font-weight:900;
+  color:var(--green-dark);line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.da-card__big small{font-size:calc(2.2*var(--u));font-weight:900;margin-left:calc(0.35*var(--u));}
+.da-card__label{margin-top:calc(0.8*var(--u));font-size:calc(1.7*var(--u));font-weight:700;
+  color:var(--mid-gray);white-space:nowrap;}
+.da-card[data-tier="s"] .da-card__st{font-size:calc(2.1*var(--u));}
+.da-card[data-tier="s"] .da-card__big{font-size:calc(5.8*var(--u));}
+.da-card[data-tier="s"] .da-card__label{font-size:calc(1.7*var(--u));}
+.da-card__st{margin-top:calc(1.1*var(--u));padding-top:calc(0.9*var(--u));font-size:calc(1.9*var(--u));
+  line-height:1.45;color:var(--ink);border-top:calc(0.1*var(--u)) solid #EDE8DF;}
+.da-card--tbd{background:#EEF6EE;border:calc(0.18*var(--u)) dashed #BDD6BE;}
+.da-card--tbd .da-card__st{border-top-color:#D7E7D8;}
+.da-card--tbd .da-card__nm,.da-card--tbd .da-card__big,.da-card--tbd .da-card__st{color:#7A9E7B;}
+.da-card--tbd .da-card__label{color:#8FAE90;}
+
+/* ---- 兩個 KPI 方塊 ---- */
+.da-kpis{display:grid;grid-template-columns:0.78fr 1.22fr;gap:calc(1.6*var(--u));}
+.da-kpi{display:flex;align-items:baseline;gap:calc(0.85*var(--u));background:var(--paper-warm);
+  border-left:calc(0.5*var(--u)) solid var(--green-primary);
+  border-radius:0 var(--radius-md) var(--radius-md) 0;
+  padding:calc(0.95*var(--u)) calc(1.6*var(--u));}
+.da-kpi__n{font-size:calc(4.6*var(--u));font-weight:900;color:var(--green-dark);line-height:1;
+  font-variant-numeric:tabular-nums;white-space:nowrap;}
+.da-kpi__n small{font-size:calc(2*var(--u));font-weight:900;margin-left:calc(0.25*var(--u));}
+.da-kpi__c{display:flex;flex-direction:column;min-width:0;}
+.da-kpi__t{font-size:calc(2.4*var(--u));font-weight:900;color:var(--ink);line-height:1.3;white-space:nowrap;}
+.da-kpi__label{font-size:calc(1.65*var(--u));font-weight:700;color:var(--mid-gray);
+  line-height:1.4;margin-top:calc(0.15*var(--u));white-space:nowrap;}
+.da-kpi__p{font-size:calc(2.4*var(--u));font-weight:900;color:var(--green-primary);
+  margin:0 calc(0.5*var(--u));}
+.da-kpi__n--tbd{color:#8FAE90;}
+.da-kpi__t--tbd{color:#7A9E7B;}
+.da-kpi__label--tbd{color:#9DB89E;}
+
+/* ---- S25 現有業務推展（人次） ---- */
+.gr-rows{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;gap:calc(1.1*var(--u));margin-top:calc(0.2*var(--u));}
+.gr-row{display:grid;grid-template-columns:calc(13*var(--u)) 1fr;gap:calc(1.6*var(--u));align-items:center;background:var(--paper-warm);border-radius:var(--radius-md);padding:calc(1*var(--u)) calc(2.2*var(--u));cursor:pointer;transition:background .2s ease;}
+.gr-row__k{font-size:calc(3*var(--u));font-weight:900;color:var(--green-dark);line-height:1.1;}
+.gr-row__ks{font-size:calc(1.55*var(--u));color:var(--mid-gray);margin-top:calc(0.3*var(--u));}
+.gr-row__nums{display:flex;align-items:baseline;gap:calc(2.2*var(--u));flex-wrap:nowrap;}
+.gr-row__pair{display:inline-flex;align-items:baseline;gap:calc(1.2*var(--u));}
+.gr-row__lab{font-size:calc(1.6*var(--u));font-weight:900;color:var(--green-primary);}
+.gr-row__a{font-size:calc(3.4*var(--u));font-weight:700;color:var(--mid-gray);font-variant-numeric:tabular-nums;}
+.gr-row__ar{font-size:calc(3.4*var(--u));font-weight:900;color:var(--green-primary);}
+.gr-row__b{font-size:calc(4.4*var(--u));font-weight:900;color:var(--green-dark);line-height:1;font-variant-numeric:tabular-nums;}
+.gr-row__pill{font-size:calc(1.6*var(--u));font-weight:900;color:#0A0A0A;background:var(--hi-yellow);border-radius:calc(1.2*var(--u));padding:calc(0.2*var(--u)) calc(1*var(--u));white-space:nowrap;}
+.gr-row__yr{font-size:calc(1.2*var(--u));color:var(--mid-gray);margin-left:calc(0.3*var(--u));}
+.gr-row__s{font-size:calc(1.55*var(--u));color:var(--mid-gray);line-height:1.4;margin-top:calc(0.2*var(--u));}
+.gr-row:hover{background:#FBEBD6;}
+.gr-row__q{font-size:calc(4.6*var(--u));font-weight:900;color:#C9C9C9;line-height:1;}
+.gr-row__ans{display:inline-flex;align-items:baseline;gap:calc(1.2*var(--u));}
+.gr-row:not(.is-open) .gr-row__ans{display:none;}
+.gr-row:not(.is-open) .gr-row__s{visibility:hidden;}
+.gr-row.is-open .gr-row__q{display:none;}
+/* ---- S26 特展 ---- */
+.xp-flow{flex:0 0 auto;display:grid;grid-template-columns:0.95fr auto 0.8fr auto 1.25fr;gap:calc(0.8*var(--u));align-items:stretch;margin-top:calc(0.2*var(--u));}
+.xp-card{border-radius:var(--radius-md);padding:calc(0.8*var(--u)) calc(1.4*var(--u));display:flex;flex-wrap:wrap;align-items:baseline;column-gap:calc(1*var(--u));row-gap:calc(0.3*var(--u));}
+.xp-card--a{background:var(--green-dark);color:#fff;}
+.xp-card--b{background:#fff;border:3px solid var(--green-primary);}
+.xp-card--c{background:#EEF6EE;border:3px dashed #BDD6BE;}
+.xp-card__no{flex-basis:100%;font-size:calc(1.2*var(--u));font-weight:900;letter-spacing:0.18em;color:rgba(255,255,255,0.75);}
+.xp-card--b .xp-card__no{color:var(--green-primary);}
+.xp-card--c .xp-card__no{color:#7A9E7B;}
+.xp-card__t{font-size:calc(2.5*var(--u));font-weight:900;line-height:1.15;}
+.xp-card--b .xp-card__t{color:var(--green-dark);}
+.xp-card--c .xp-card__t{color:#4E7A50;}
+.xp-card__w{font-size:calc(1.6*var(--u));font-weight:900;color:var(--hi-yellow);}
+.xp-card--b .xp-card__w{color:var(--green-primary);}
+.xp-card--c .xp-card__w{color:#7A9E7B;}
+.xp-card__b{flex-basis:100%;font-size:calc(1.45*var(--u));line-height:1.4;margin-top:calc(0.3*var(--u));}
+.xp-card--a .xp-card__b{color:rgba(255,255,255,0.9);}
+.xp-card--b .xp-card__b{color:var(--ink);}
+.xp-card--c .xp-card__b{color:#5A7F5C;}
+.xp-page .msask{padding:calc(0.6*var(--u)) calc(1.8*var(--u));margin-top:calc(0.8*var(--u));}
+.xp-page .foot{margin-top:calc(0.6*var(--u));}
+.xp-arrow{align-self:center;font-size:calc(3.2*var(--u));font-weight:900;color:var(--green-primary);}
+.xp-img{flex:1;min-height:calc(12*var(--u));margin-top:calc(0.8*var(--u));overflow:hidden;}
+.xp-img img{display:block;width:100%;height:100%;object-fit:contain;object-position:center center;}
+
+/* ---- S27 分組討論 ---- */
+.gd{flex:0 0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:calc(1.6*var(--u));margin-top:calc(0.4*var(--u));align-items:start;}
+.gd-card{border-radius:var(--radius-md);background:var(--paper-warm);display:flex;flex-direction:column;overflow:hidden;}
+.gd-card__head{padding:calc(1.1*var(--u)) calc(1.8*var(--u));color:#fff;}
+.gd-card__no{font-size:calc(1.15*var(--u));font-weight:900;letter-spacing:0.18em;opacity:0.8;}
+.gd-card__t{font-size:calc(2.6*var(--u));font-weight:900;line-height:1.2;}
+.gd-card__body{padding:calc(1.3*var(--u)) calc(1.8*var(--u)) calc(1.6*var(--u));display:flex;flex-direction:column;gap:calc(0.8*var(--u));}
+.gd-card__l{font-size:calc(1.15*var(--u));font-weight:900;letter-spacing:0.14em;color:var(--mid-gray);}
+.gd-card__m{font-size:calc(2.2*var(--u));font-weight:900;color:var(--ink);line-height:1.3;}
+.gd-chips{display:flex;flex-wrap:wrap;gap:calc(0.5*var(--u));}
+.gd-chip{font-size:calc(1.5*var(--u));font-weight:700;color:var(--green-dark);background:#fff;border:2px solid var(--green-primary);border-radius:calc(1.2*var(--u));padding:calc(0.1*var(--u)) calc(0.9*var(--u));}
+.gd-card__q{font-size:calc(1.85*var(--u));line-height:1.5;color:var(--ink);margin-top:calc(0.3*var(--u));}
+.gd-card__p{font-size:calc(1.25*var(--u));color:var(--mid-gray);}
+
+
+/* ===== 海外頁（三種應對：Outbound／Inbound／Local）。尺寸一律 calc(N*var(--u))。 ===== */
+.ov-fig{flex:1;min-height:0;display:flex;}
+.ov-fig svg{width:100%;height:100%;}
+/* 第三欄字較多（四個動作），給它寬一點，讓三張卡都維持「三行」 */
+.ov-cards{display:grid;grid-template-columns:1fr 1fr 1.5fr;gap:calc(1.6*var(--u));margin-top:calc(0.9*var(--u));}
+.ov-card{min-width:0;background:var(--paper-warm);border-top:3px solid var(--green-primary);border-radius:0 0 var(--radius-md) var(--radius-md);padding:calc(0.55*var(--u)) calc(1.2*var(--u)) calc(0.75*var(--u));display:flex;flex-direction:column;}
+.ov-card__m{font-size:calc(1.8*var(--u));font-weight:900;color:var(--green-primary);letter-spacing:0.06em;line-height:1.15;}
+.ov-card__t{font-size:calc(1.9*var(--u));font-weight:900;color:var(--ink);line-height:1.22;margin-top:calc(0.05*var(--u));}
+.ov-card__b{font-size:calc(1.6*var(--u));font-weight:700;color:var(--green-dark);line-height:1.35;margin-top:calc(0.3*var(--u));}
+
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="nl-logo" viewBox="0 0 162.16 45.83"><g id="c"><path d="M45.83,22.92c0-3.53-2.56-6.46-5.93-7.03.32-.45.59-.93.79-1.43.35-.86.52-1.77.52-2.69,0-.23-.01-.46-.03-.68-.04-.46-.13-.91-.26-1.35-.33-1.1-.93-2.15-1.8-3.02-1.4-1.4-3.22-2.09-5.05-2.09-1.45,0-2.89.44-4.12,1.32,0,0,0,0,0,0-.58-3.37-3.5-5.93-7.03-5.93s-6.46,2.56-7.03,5.93c-.45-.32-.93-.59-1.43-.79-.86-.35-1.77-.52-2.69-.52-.46,0-.91.04-1.36.13-1.35.26-2.64.92-3.69,1.96-2.5,2.5-2.75,6.38-.78,9.17-3.37.58-5.93,3.5-5.93,7.03s2.56,6.46,5.93,7.03c-.32.45-.59.93-.79,1.43-.09.22-.16.43-.23.65-.13.44-.22.89-.26,1.35-.02.23-.03.46-.03.68,0,1.83.7,3.66,2.09,5.05.83.83,1.81,1.4,2.85,1.74.1.03.2.06.3.09.37.1.75.18,1.13.22.26.03.51.05.77.05s.53-.02.8-.05c.34-.04.68-.1,1.02-.19.15-.04.3-.08.45-.13.65-.22,1.28-.53,1.85-.93.58,3.36,3.5,5.93,7.03,5.93s6.46-2.56,7.03-5.93c0,0,0,0,0,0,1.23.87,2.67,1.31,4.12,1.31,1.83,0,3.66-.7,5.05-2.09,2.5-2.5,2.75-6.38.78-9.17,3.37-.58,5.93-3.5,5.93-7.03ZM16.31,38.61c-1.21,1.21-2.83,1.88-4.54,1.88s-3.33-.67-4.54-1.88c-1.21-1.21-1.88-2.83-1.88-4.54,0-1.48.5-2.89,1.42-4.03.13,0,.26.02.39.02,2.11,0,4.01-.92,5.31-2.38,1.45.16,2.8.79,3.85,1.84,1.21,1.21,1.88,2.83,1.88,4.54s-.67,3.33-1.88,4.54ZM40.49,34.07c0,1.72-.67,3.33-1.88,4.54-1.21,1.21-2.83,1.88-4.54,1.88s-3.31-.66-4.52-1.86l-.02-.02-15.25-15.25c0-.15.02-.29.02-.44,0-3.95-3.2-7.15-7.15-7.15-.13,0-.26.01-.39.02-.92-1.14-1.42-2.54-1.42-4.03,0-1.72.67-3.33,1.88-4.54,1.21-1.21,2.83-1.88,4.54-1.88s3.31.66,4.53,1.86l.03.04.02.02,15.22,15.22c0,.15-.02.29-.02.44,0,3.95,3.2,7.15,7.15,7.15.13,0,.26-.01.39-.02.92,1.14,1.42,2.54,1.42,4.03ZM39.07,15.79c-.13,0-.26-.02-.39-.02-2.11,0-4.01.92-5.31,2.38-1.45-.16-2.8-.79-3.85-1.84-1.21-1.21-1.88-2.83-1.88-4.54s.67-3.33,1.88-4.54,2.83-1.88,4.54-1.88,3.33.67,4.54,1.88,1.88,2.83,1.88,4.54c0,1.48-.5,2.89-1.42,4.03Z" fill="currentColor" stroke-width="0"/><path d="M59.1,17.51h5.55v1.13h-1.86c-.47.85-.98,1.57-1.54,2.13.91.35,1.83.72,2.74,1.11l-.74,1.2c-1.03-.49-2.07-.95-3.12-1.38-.08.04-.15.08-.23.14-1.27.72-2.95,1.13-5.06,1.22l-.34-1.32c1.67.01,3.04-.2,4.11-.64-.89-.34-1.78-.65-2.68-.93.41-.49.78-1,1.12-1.53h-2.43v-1.13h3.1c.21-.39.41-.79.59-1.2h-3.19v-3.49h3.78v-.97h-3.44v-2.25h-.91v-1.05h.91v-2.35h3.44v-1.05h1.33v1.05h3.44v2.35h1.2v1.05h-1.2v2.25h-3.44v.97h3.8v3.49h-4.26c-.21.43-.44.83-.67,1.2ZM58.89,13.86h-2.49v1.4h2.49v-1.4ZM56.72,8.54h2.17v-1.3h-2.17v1.3ZM58.89,9.59h-2.17v1.2h2.17v-1.2ZM61.4,18.63h-3c-.23.32-.46.63-.68.93.73.23,1.48.48,2.22.74.53-.44,1.02-1,1.46-1.67ZM60.22,8.54h2.17v-1.3h-2.17v1.3ZM62.39,9.59h-2.17v1.2h2.17v-1.2ZM62.73,13.86h-2.51v1.4h2.51v-1.4ZM64.12,12.91c1.37-1.8,2.31-4.42,2.83-7.86l1.39.1c-.19,1.05-.41,2.03-.65,2.93h4.54v1.42h-1.12v1.59c0,2.81-.61,5.32-1.84,7.53.75,1.14,1.76,2.26,3.02,3.38l-1.03,1.09c-1.12-1.07-2.04-2.14-2.78-3.2-.81,1.16-1.81,2.24-3,3.22l-.95-1.18c1.29-1,2.35-2.11,3.16-3.36-.2-.38-.38-.75-.53-1.13-.52-1.25-.91-2.88-1.16-4.89-.29.56-.61,1.07-.95,1.53l-.93-1.16ZM68.47,17.2c.9-1.81,1.35-3.85,1.35-6.11v-1.59h-2.57c-.1.31-.2.61-.3.89.27,2.86.74,5.04,1.41,6.56.04.09.08.17.11.25Z" fill="currentColor" stroke-width="0"/><path d="M80.03,7.13h9.2v-1.98h1.37v1.98h3.95v1.26h-3.95c.03,2.39.12,4.44.29,6.13,1.17-1.22,2.03-2.63,2.59-4.23l1.18.52c-.7,2.1-1.88,3.91-3.54,5.45.09.57.18,1.08.29,1.53.53,2.28,1.03,3.41,1.5,3.41.37,0,.72-1,1.06-3.01l1.05,1.01c-.51,2.48-1.21,3.73-2.11,3.73-1.08,0-1.97-1.43-2.66-4.29-.11-.44-.22-.91-.3-1.4-.38.28-.79.56-1.22.83l-.91-1.14c.67-.4,1.29-.83,1.86-1.3-.28-2.08-.43-4.5-.44-7.26h-9.2v2.87c0,2.3-.58,4.44-1.73,6.4l-1.16-.83c1.01-1.71,1.52-3.56,1.52-5.57v-4.13h1.37ZM78,22.2c.48-1.24.83-2.52,1.05-3.84l1.24.19c-.19,1.36-.52,2.66-.99,3.92l-1.29-.27ZM81.08,9.77h6.98v1.2h-6.98v-1.2ZM81.08,21.08v-2.99h1.37v2.89c0,.34.17.5.51.5h2.28c.42,0,.63-.21.63-.62v-1.4l1.25.35v1.26c0,1.15-.52,1.73-1.56,1.73h-2.93c-1.04,0-1.56-.58-1.56-1.73ZM82.69,12.23h4.89v4.15h-6.14v-4.15h1.25ZM86.32,13.4h-3.63v1.82h3.63v-1.82ZM82.94,17.45l1.03-.66c.65.67,1.2,1.35,1.67,2.04l-1.1.66c-.41-.66-.94-1.34-1.6-2.04ZM87.41,18.44l1.2-.27c.56,1.27,1,2.49,1.31,3.67l-1.29.25c-.24-1.14-.65-2.35-1.22-3.65ZM91.48,5.65l.95-.58c.53.48.98.94,1.35,1.4l-1.03.64c-.28-.41-.7-.9-1.27-1.45Z" fill="currentColor" stroke-width="0"/><path d="M100.01,23.08l-.4-1.22c2.33-.14,4.58-.45,6.73-.91l.57,1.07c-2.21.53-4.51.89-6.9,1.07ZM114.08,13.3h-11.31v-2h-3.06v-1.07h3.06v-1.92h11.31v1.92h3.08v1.07h-3.08v2ZM115.26,7.42h-13.69v1.88h-1.39v-3.01h7.49c-.06-.41-.17-.85-.3-1.32l1.39-.1c.14.49.24.96.3,1.42h7.59v3.07h-1.39v-1.94ZM103.28,14.09h11.71v6.65h-13.1v-6.65h1.39ZM103.28,16.03h10.33v-.97h-10.33v.97ZM103.28,17.91h10.33v-.97h-10.33v.97ZM113.61,18.83h-10.33v.95h10.33v-.95ZM107.83,10.23v-.95h-3.69v.95h3.69ZM107.83,12.33v-1.03h-3.69v1.03h3.69ZM109.14,9.28v.95h3.57v-.95h-3.57ZM109.14,11.3v1.03h3.57v-1.03h-3.57ZM110.05,22.03l.61-.95c2,.15,4.24.46,6.71.91l-.61,1.2c-2.29-.52-4.53-.91-6.71-1.16Z" fill="currentColor" stroke-width="0"/><path d="M123.25,17.33c-.11,1.77-.27,3.53-.46,5.26l-.82-.08c.21-2.07.39-3.81.51-5.22l.76.04ZM122.7,14.75V5.83h6.39v1.18h-2.21v1.84h1.92v1.14h-1.92v1.77h1.92v1.14h-1.92v1.84h2.24v3.41c0,1.45-.04,2.45-.11,3.01-.06.62-.28,1.07-.65,1.36-.34.28-.94.43-1.79.43h-1.1l-.34-1.36h1.33c.48,0,.82-.09,1.03-.27.19-.15.31-.45.36-.87.05-.45.08-1.29.08-2.5v-2.02h-5.23v-1.18ZM124.43,17.22c.1,1.59.18,3.18.23,4.75l-.74.04c-.05-1.87-.11-3.45-.17-4.73l.69-.06ZM125.7,8.85v-1.84h-1.77v1.84h1.77ZM125.7,10h-1.77v1.77h1.77v-1.77ZM123.93,12.91v1.84h1.77v-1.84h-1.77ZM125.74,17.02c.16,1.22.32,2.42.46,3.63l-.74.08c-.14-1.42-.27-2.62-.38-3.59l.67-.12ZM127.03,16.87c.22.98.41,1.97.59,2.95l-.67.12c-.18-1.15-.34-2.12-.49-2.91l.57-.16ZM132.39,19.12c.63.5,1.21,1.05,1.73,1.65l-.87,1.01c-.39-.54-.82-1.05-1.27-1.53-.47,1.02-1.16,1.97-2.07,2.85l-1.03-.87c1.51-1.33,2.4-2.9,2.68-4.71l1.12.27c-.05.47-.15.91-.29,1.34ZM137.49,10.66h-5.95v-1.03c-.52.4-1.06.77-1.63,1.11l-.91-1.11c2.23-1.2,4.01-2.79,5.34-4.77l1.31.41c-.14.21-.29.41-.44.62,1.47,1.44,3.08,2.6,4.83,3.49l-.82,1.2c-.6-.34-1.17-.7-1.73-1.11v1.18ZM133.91,12.19v5.12h-3.9v-5.12h3.9ZM131.12,13.45v2.6h1.69v-2.6h-1.69ZM131.82,9.42h5.59c-1.07-.75-2.05-1.6-2.95-2.56-.8.94-1.68,1.8-2.64,2.56ZM137.22,19.39c1,.75,1.92,1.6,2.76,2.54l-.89,1.05c-.7-.91-1.47-1.74-2.32-2.5-.48.96-1.16,1.85-2.03,2.68l-1.01-.87c1.53-1.35,2.45-2.94,2.76-4.77l1.1.29c-.08.54-.2,1.07-.36,1.59ZM138.99,12.19v5.12h-3.86v-5.12h3.86ZM136.23,13.45v2.6h1.65v-2.6h-1.65Z" fill="currentColor" stroke-width="0"/><path d="M147.6,10.04h11.9v1.34h-6.96c-1.2,1.07-2.3,1.95-3.29,2.62,2.52-.1,5.31-.19,8.37-.27-.47-.44-.99-.89-1.56-1.36l1.03-.74c1.61,1.28,2.98,2.54,4.11,3.76l-1.16.83c-.33-.41-.72-.85-1.16-1.3-1.62.03-3.19.06-4.7.1v2.35h6.96v1.3h-6.96v2.23h7.95v1.4h-17.21v-1.4h7.83v-2.23h-6.81v-1.3h6.81v-2.29c-2.02.08-3.93.18-5.74.31l-.27-1.3c.68-.25,1.48-.73,2.4-1.45.52-.41,1.02-.83,1.5-1.26h-3.04v-1.34ZM160.21,8.41h-13.44v2.68h-1.41v-4.05h7.49c-.1-.56-.24-1.14-.42-1.77l1.41-.12c.15.65.28,1.27.38,1.88h7.4v4.05h-1.41v-2.68Z" fill="currentColor" stroke-width="0"/><path d="M56.02,32.13h1.88l3.7,5.97h.02v-5.97h1.42v7.97h-1.8l-3.78-6.16h-.02v6.16h-1.42v-7.97Z" fill="currentColor" stroke-width="0"/><path d="M73.01,37.17c0,.48-.08.91-.25,1.3-.17.39-.39.71-.68.99-.29.27-.62.48-1.01.62s-.81.22-1.27.22-.88-.07-1.27-.22c-.39-.15-.73-.35-1.02-.62-.29-.27-.51-.6-.68-.99-.16-.39-.24-.82-.24-1.3v-5.04h1.42v4.99c0,.23.03.46.09.69.06.23.16.43.3.61.14.18.32.33.55.44.23.11.51.17.85.17s.62-.06.85-.17c.23-.11.41-.26.55-.44.14-.18.24-.38.3-.61.06-.23.09-.46.09-.69v-4.99h1.42v5.04Z" fill="currentColor" stroke-width="0"/><path d="M76.56,32.13h2.22l2.07,5.66h.03l2.05-5.66h2.23v7.97h-1.41v-6.41h-.02l-2.42,6.41h-.99l-2.39-6.41h-.02v6.41h-1.35v-7.97Z" fill="currentColor" stroke-width="0"/><path d="M88.77,32.13h5.28v1.24h-3.86v2.03h3.66v1.19h-3.66v2.25h4.06v1.26h-5.48v-7.97Z" fill="currentColor" stroke-width="0"/><path d="M97.5,32.13h2.77c.38,0,.74.04,1.09.12.35.08.67.21.94.39.27.18.49.42.66.71.16.29.25.65.25,1.07,0,.58-.16,1.05-.49,1.41-.33.36-.77.61-1.33.74l2.13,3.54h-1.71l-1.85-3.38h-1.04v3.38h-1.42v-7.97ZM100.08,35.56c.2,0,.41-.01.61-.04.2-.03.38-.09.55-.17.16-.08.29-.2.4-.35.11-.15.16-.35.16-.59,0-.22-.05-.4-.15-.53s-.22-.25-.37-.33c-.15-.08-.32-.14-.51-.17-.19-.03-.38-.04-.56-.04h-1.28v2.24h1.16Z" fill="currentColor" stroke-width="0"/><path d="M108.94,32.13h1.23l3.43,7.97h-1.62l-.74-1.82h-3.46l-.72,1.82h-1.59l3.47-7.97ZM110.74,37.06l-1.23-3.24-1.25,3.24h2.48Z" fill="currentColor" stroke-width="0"/><path d="M121.79,33.99c-.21-.29-.48-.49-.82-.62-.34-.13-.67-.2-.99-.2-.41,0-.79.07-1.13.22-.34.15-.63.36-.87.62-.24.26-.43.57-.56.92-.13.35-.2.74-.2,1.15,0,.44.06.83.19,1.19.13.36.31.67.55.93.24.26.52.46.85.6.33.14.7.21,1.11.21s.81-.08,1.14-.25c.33-.17.6-.39.8-.67l1.14.8c-.35.44-.78.79-1.29,1.03-.51.24-1.11.37-1.79.37-.62,0-1.19-.1-1.72-.31-.52-.21-.97-.5-1.35-.87-.37-.37-.67-.81-.88-1.33-.21-.51-.31-1.08-.31-1.71s.11-1.21.33-1.73c.22-.51.53-.95.91-1.31.39-.36.84-.64,1.37-.83.53-.19,1.1-.29,1.71-.29.25,0,.52.02.8.07.28.05.54.12.8.23.26.1.5.23.72.38s.42.33.57.54l-1.08.86Z" fill="currentColor" stroke-width="0"/><path d="M127.52,36.64l-2.99-4.51h1.73l2,3.36,2.03-3.36h1.64l-2.99,4.51v3.46h-1.42v-3.46Z" fill="currentColor" stroke-width="0"/><path d="M138.86,32.13h1.42v6.71h3.39v1.26h-4.81v-7.97Z" fill="currentColor" stroke-width="0"/><path d="M148.97,32.13h1.23l3.43,7.97h-1.62l-.74-1.82h-3.46l-.72,1.82h-1.59l3.47-7.97ZM150.77,37.06l-1.23-3.24-1.25,3.24h2.48Z" fill="currentColor" stroke-width="0"/><path d="M156.28,32.13h3.11c.3,0,.6.04.89.11.29.07.55.19.78.35.23.16.41.37.56.62.14.26.21.56.21.92,0,.45-.13.82-.38,1.11-.25.29-.59.5-1,.63v.02c.5.07.91.26,1.24.59s.48.75.48,1.29c0,.44-.09.8-.26,1.1-.17.3-.4.53-.68.71-.28.18-.6.31-.97.39-.36.08-.73.12-1.11.12h-2.87v-7.97ZM157.7,35.37h1.26c.47,0,.83-.09,1.08-.28.25-.19.37-.45.37-.8s-.13-.62-.38-.77c-.26-.15-.65-.23-1.19-.23h-1.14v2.07ZM157.7,38.9h1.27c.18,0,.38-.01.59-.04.21-.03.4-.08.58-.16.18-.08.32-.2.44-.36.12-.16.17-.37.17-.63,0-.42-.14-.71-.43-.88-.29-.17-.72-.25-1.29-.25h-1.33v2.32Z" fill="currentColor" stroke-width="0"/></g></symbol></svg>
+
+<div class="deck">
+
+  <section class="slide probe-cover cov-full" style="background:#FEF4E8;">
+    <img class="cov-full__img" data-bleed="50 35" src="assets/cover-growth-path.png" alt="">
+    <div class="cov-full__txt">
+      <div class="cov-full__kicker">年度主管會議</div>
+      <div class="cov-visual__big">2026 → 2027</div>
+      <div class="cov-full__title">成果與展望</div>
+      <div class="cov-visual__small is-cleared"><br></div>
+    </div>
+    <div class="cov-full__meta">
+      <div class="probe-cover__subtitle">賴以威<br>2026 年 10 月</div>
+      <svg class="probe-cover__logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">02</span><span class="page-label__bar"></span><span>大綱</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">大綱</div>
+      <div class="ag"><div class="ag-row"><div class="ag-row__no">01</div><div class="ag-row__t">回顧 2026</div><div class="ag-row__s">六年成長、去年目標、組織</div></div><div class="ag-row"><div class="ag-row__no">02</div><div class="ag-row__t">未來：少子化衝擊</div><div class="ag-row__s">十年後的市場</div></div><div class="ag-row"><div class="ag-row__no">03</div><div class="ag-row__t">長期佈局：數位、授權、海外</div><div class="ag-row__s">三條新線</div></div><div class="ag-row"><div class="ag-row__no">04</div><div class="ag-row__t">既有業務拓展</div><div class="ag-row__s">大安校區、營隊・思考課・共學、特展</div></div><div class="ag-row"><div class="ag-row__no">05</div><div class="ag-row__t">組織人才</div><div class="ag-row__s">公共事務組、數位人才、組織與人力</div></div><div class="ag-row"><div class="ag-row__no">06</div><div class="ag-row__t">結論</div><div class="ag-row__s"></div></div></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">03</span><span class="page-label__bar"></span><span>六年成長曲線</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">6年總成長 17 倍，但沒達成去年目標</div>
+      <div class="chart"><svg viewBox="0 0 1000 470" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" font-family="inherit" role="img" aria-label="2021 到 2026 營收成長折線">
+<line x1="40" y1="350.0" x2="960" y2="350.0" stroke="#CFCFCF" stroke-width="2"/>
+<g data-reveal data-anim="fade">
+<line x1="764.0" y1="220.4" x2="940.0" y2="96.4" stroke="#A9A9A9" stroke-width="3" stroke-dasharray="9 7"/>
+<circle cx="940.0" cy="96.4" r="11" fill="#fff" stroke="#A9A9A9" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="940.0" y="74.4" text-anchor="middle" font-size="24" font-weight="700" fill="#757070">預估 1.55 億</text>
+</g>
+<polyline points="60.0,339.4 236.0,314.0 412.0,300.7 588.0,267.0 764.0,220.4 940.0,169.6" fill="none" stroke="#379C39" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="60.0" cy="339.4" r="9" fill="#379C39" stroke="#fff" stroke-width="3"/>
+<text x="60.0" y="319.4" text-anchor="middle" font-size="26" font-weight="700" fill="#0A0A0A">650萬</text>
+<text x="60.0" y="386.0" text-anchor="middle" font-size="25" font-weight="400" fill="#757070">2021</text>
+<circle cx="236.0" cy="314.0" r="9" fill="#379C39" stroke="#fff" stroke-width="3"/>
+<text x="236.0" y="294.0" text-anchor="middle" font-size="26" font-weight="700" fill="#0A0A0A">2,200萬</text>
+<text x="236.0" y="386.0" text-anchor="middle" font-size="25" font-weight="400" fill="#757070">2022</text>
+<circle cx="412.0" cy="300.7" r="9" fill="#379C39" stroke="#fff" stroke-width="3"/>
+<text x="412.0" y="280.7" text-anchor="middle" font-size="26" font-weight="700" fill="#0A0A0A">3,010萬</text>
+<text x="412.0" y="386.0" text-anchor="middle" font-size="25" font-weight="400" fill="#757070">2023</text>
+<circle cx="588.0" cy="267.0" r="9" fill="#379C39" stroke="#fff" stroke-width="3"/>
+<text x="588.0" y="247.0" text-anchor="middle" font-size="26" font-weight="700" fill="#0A0A0A">5,070萬</text>
+<text x="588.0" y="386.0" text-anchor="middle" font-size="25" font-weight="400" fill="#757070">2024</text>
+<circle cx="764.0" cy="220.4" r="9" fill="#379C39" stroke="#fff" stroke-width="3"/>
+<text x="764.0" y="200.4" text-anchor="middle" font-size="26" font-weight="700" fill="#0A0A0A">7,920萬</text>
+<text x="764.0" y="386.0" text-anchor="middle" font-size="25" font-weight="400" fill="#757070">2025</text>
+<circle cx="940.0" cy="169.6" r="12" fill="#004B24" stroke="#fff" stroke-width="3"/>
+<text x="940.0" y="149.6" text-anchor="middle" font-size="28" font-weight="900" fill="#004B24">實際 1.1 億</text>
+<text x="940.0" y="386.0" text-anchor="middle" font-size="25" font-weight="700" fill="#0A0A0A">2026</text>
+<text x="40" y="438.0" font-size="21" fill="#757070">年成長</text>
+<rect x="104.0" y="414.0" width="88" height="36" rx="18" fill="#FEF4E8"/>
+<text x="148.0" y="439.0" text-anchor="middle" font-size="24" font-weight="900" fill="#004B24">×3.4</text>
+<rect x="280.0" y="414.0" width="88" height="36" rx="18" fill="#FEF4E8"/>
+<text x="324.0" y="439.0" text-anchor="middle" font-size="24" font-weight="900" fill="#004B24">×1.4</text>
+<rect x="456.0" y="414.0" width="88" height="36" rx="18" fill="#FEF4E8"/>
+<text x="500.0" y="439.0" text-anchor="middle" font-size="24" font-weight="900" fill="#004B24">×1.7</text>
+<rect x="632.0" y="414.0" width="88" height="36" rx="18" fill="#FEF4E8"/>
+<text x="676.0" y="439.0" text-anchor="middle" font-size="24" font-weight="900" fill="#004B24">×1.6</text>
+<rect x="808.0" y="414.0" width="88" height="36" rx="18" fill="#FEF4E8"/>
+<text x="852.0" y="439.0" text-anchor="middle" font-size="24" font-weight="900" fill="#004B24">×1.4</text>
+<text x="40" y="36" font-size="22" fill="#757070"></text>
+</svg></div>
+    </div>
+  </section>
+
+  <section class="slide probe-breather" style="background:#004B24;">
+    <img class="c2-close__img" src="assets/think-strategy.png" alt="">
+    <div class="page-label"><span class="page-label__num">04</span><span class="page-label__bar"></span><span>策略</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame c2-close">
+      <div class="c2-close__big">主管要有充裕時間<br><span class="hi">思考策略</span>，<br>不能太落入執行</div>
+    </div>
+  </section>
+
+  <section class="slide probe-chapter" style="background:#FEF4E8;">
+    <div class="probe-chapter__left probe-chapter__left--img"><img class="probe-chapter__img" src="assets/chapter-02-classroom.png" alt="教室裡只有前排三個孩子，後面一片空位"><div class="probe-chapter__num probe-chapter__num--stamp">02</div></div>
+    <div class="probe-chapter__right">
+      <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+      <div class="probe-chapter__label">CHAPTER 02</div>
+      <div class="probe-chapter__title">少子化比想像中快</div>
+      <div class="probe-chapter__sub is-cleared"><br></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">06</span><span class="page-label__bar"></span><span>中高年級人數</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">主力客群：5年少1/4，台北少近30%</div>
+      <div class="chart"><svg viewBox="0 0 1000 462" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" font-family="inherit" role="img" aria-label="中高年級人數指數 114 學年等於 100">
+<line x1="104.0" y1="382.9" x2="782.0" y2="382.9" stroke="#EFEFEF" stroke-width="1.5"/>
+<text x="94.0" y="389.9" text-anchor="end" font-size="21" font-weight="400" fill="#B5B5B5">70%</text>
+<line x1="104.0" y1="297.1" x2="782.0" y2="297.1" stroke="#EFEFEF" stroke-width="1.5"/>
+<text x="94.0" y="304.1" text-anchor="end" font-size="21" font-weight="400" fill="#B5B5B5">80%</text>
+<line x1="104.0" y1="211.4" x2="782.0" y2="211.4" stroke="#EFEFEF" stroke-width="1.5"/>
+<text x="94.0" y="218.4" text-anchor="end" font-size="21" font-weight="400" fill="#B5B5B5">90%</text>
+<line x1="104.0" y1="125.7" x2="782.0" y2="125.7" stroke="#C9C9C9" stroke-width="2"/>
+<text x="94.0" y="132.7" text-anchor="end" font-size="21" font-weight="900" fill="#757070">100%</text>
+<text x="112.0" y="438.0" text-anchor="middle" font-size="24" font-weight="700" fill="#0A0A0A">2025</text>
+<text x="221.3" y="438.0" text-anchor="middle" font-size="24" font-weight="700" fill="#0A0A0A">2026</text>
+<text x="330.7" y="438.0" text-anchor="middle" font-size="24" font-weight="700" fill="#0A0A0A">2027</text>
+<text x="440.0" y="438.0" text-anchor="middle" font-size="24" font-weight="700" fill="#0A0A0A">2028</text>
+<text x="549.3" y="438.0" text-anchor="middle" font-size="24" font-weight="700" fill="#0A0A0A">2029</text>
+<text x="658.7" y="438.0" text-anchor="middle" font-size="24" font-weight="700" fill="#0A0A0A">2030</text>
+<text x="768.0" y="438.0" text-anchor="middle" font-size="24" font-weight="700" fill="#0A0A0A">2031</text>
+<polyline points="112.0,108.0 221.3,125.7 330.7,164.4 440.0,208.6 549.3,250.7 658.7,291.6 768.0,331.9" fill="none" stroke="#9BBF9C" stroke-width="5.0" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="112.0" cy="108.0" r="7.0" fill="#9BBF9C" stroke="#fff" stroke-width="2.5"/>
+<circle cx="221.3" cy="125.7" r="7.0" fill="#9BBF9C" stroke="#fff" stroke-width="2.5"/>
+<circle cx="330.7" cy="164.4" r="7.0" fill="#9BBF9C" stroke="#fff" stroke-width="2.5"/>
+<circle cx="440.0" cy="208.6" r="7.0" fill="#9BBF9C" stroke="#fff" stroke-width="2.5"/>
+<circle cx="549.3" cy="250.7" r="7.0" fill="#9BBF9C" stroke="#fff" stroke-width="2.5"/>
+<circle cx="658.7" cy="291.6" r="7.0" fill="#9BBF9C" stroke="#fff" stroke-width="2.5"/>
+<circle cx="768.0" cy="331.9" r="7.0" fill="#9BBF9C" stroke="#fff" stroke-width="2.5"/>
+<polyline points="112.0,107.5 221.3,125.7 330.7,165.9 440.0,211.6 549.3,255.3 658.7,296.4 768.0,337.3" fill="none" stroke="#379C39" stroke-width="5.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="112.0" cy="107.5" r="7.5" fill="#379C39" stroke="#fff" stroke-width="2.5"/>
+<circle cx="221.3" cy="125.7" r="7.5" fill="#379C39" stroke="#fff" stroke-width="2.5"/>
+<circle cx="330.7" cy="165.9" r="7.5" fill="#379C39" stroke="#fff" stroke-width="2.5"/>
+<circle cx="440.0" cy="211.6" r="7.5" fill="#379C39" stroke="#fff" stroke-width="2.5"/>
+<circle cx="549.3" cy="255.3" r="7.5" fill="#379C39" stroke="#fff" stroke-width="2.5"/>
+<circle cx="658.7" cy="296.4" r="7.5" fill="#379C39" stroke="#fff" stroke-width="2.5"/>
+<circle cx="768.0" cy="337.3" r="7.5" fill="#379C39" stroke="#fff" stroke-width="2.5"/>
+<circle cx="798.0" cy="289.3" r="7.5" fill="#9BBF9C"/>
+<text x="816.0" y="297.3" font-size="23" font-weight="900" fill="#9BBF9C">全國</text>
+<text x="880.0" y="297.3" font-size="23" font-weight="900" fill="#8A8A8A">−24.1%</text>
+<circle cx="798.0" cy="321.3" r="7.5" fill="#379C39"/>
+<text x="816.0" y="329.3" font-size="23" font-weight="900" fill="#379C39">六都</text>
+<text x="880.0" y="329.3" font-size="23" font-weight="900" fill="#8A8A8A">−24.7%</text>
+<text x="782.0" y="28.0" text-anchor="end" font-size="20" fill="#B5B5B5">2026 年＝100%</text>
+</svg></div>
+      <div class="foot is-cleared"><br></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">07</span><span class="page-label__bar"></span><span>六都數據</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">都會客群五年內減少1/4</div>
+      <table class="c2-mt">
+        <thead><tr><th></th><th class="num" colspan="2">114<span class="yr">2025</span></th><th class="num" colspan="2">115<span class="yr">2026</span></th><th class="num" colspan="2">116<span class="yr">2027</span></th><th class="num" colspan="2">117<span class="yr">2028</span></th><th class="num" colspan="2">120<span class="yr">2031</span></th></tr></thead>
+        <tbody><tr class="c2-mt__row c2-mt__hot"><td class="c2-mt__name">臺北市</td><td class="num">83,230</td><td class="num pct">+3.8%</td><td class="num">80,207</td><td class="num pct">基準</td><td class="num">74,979</td><td class="num pct">-6.5%</td><td class="num">70,216</td><td class="num pct">-13%</td><td class="num">58,167</td><td class="num pct">-28%</td></tr>
+<tr class="c2-mt__row c2-mt__hot"><td class="c2-mt__name">新北市</td><td class="num">136,172</td><td class="num pct">+3.0%</td><td class="num">132,238</td><td class="num pct">基準</td><td class="num">124,867</td><td class="num pct">-5.6%</td><td class="num">116,877</td><td class="num pct">-12%</td><td class="num">95,829</td><td class="num pct">-28%</td></tr>
+<tr class="c2-mt__row"><td class="c2-mt__name">桃園市</td><td class="num">91,787</td><td class="num pct">+1.3%</td><td class="num">90,623</td><td class="num pct">基準</td><td class="num">87,492</td><td class="num pct">-3.5%</td><td class="num">84,031</td><td class="num pct">-7.3%</td><td class="num">73,134</td><td class="num pct">-19%</td></tr>
+<tr class="c2-mt__row"><td class="c2-mt__name">臺中市</td><td class="num">111,470</td><td class="num pct">+1.2%</td><td class="num">110,133</td><td class="num pct">基準</td><td class="num">105,805</td><td class="num pct">-3.9%</td><td class="num">99,787</td><td class="num pct">-9.4%</td><td class="num">83,266</td><td class="num pct">-24%</td></tr>
+<tr class="c2-mt__row"><td class="c2-mt__name">臺南市</td><td class="num">63,016</td><td class="num pct">+1.5%</td><td class="num">62,065</td><td class="num pct">基準</td><td class="num">59,475</td><td class="num pct">-4.2%</td><td class="num">56,169</td><td class="num pct">-9.5%</td><td class="num">45,779</td><td class="num pct">-26%</td></tr>
+<tr class="c2-mt__row"><td class="c2-mt__name">高雄市</td><td class="num">88,260</td><td class="num pct">+1.8%</td><td class="num">86,702</td><td class="num pct">基準</td><td class="num">83,027</td><td class="num pct">-4.2%</td><td class="num">78,582</td><td class="num pct">-9.4%</td><td class="num">67,063</td><td class="num pct">-23%</td></tr>
+<tr class="c2-mt__sum"><td class="c2-mt__name">六都合計</td><td class="num">573,935</td><td class="num pct">+2.1%</td><td class="num">561,968</td><td class="num pct">基準</td><td class="num">535,645</td><td class="num pct">-4.7%</td><td class="num">505,662</td><td class="num pct">-10.0%</td><td class="num">423,238</td><td class="num pct">-25%</td></tr>
+<tr class="c2-mt__hc"><td class="c2-mt__name">新竹縣市</td><td class="num">48,585</td><td class="num pct">+2.7%</td><td class="num">47,310</td><td class="num pct">基準</td><td class="num">44,880</td><td class="num pct">−5.1%</td><td class="num">42,480</td><td class="num pct">−10%</td><td class="num">36,066</td><td class="num pct">−24%</td></tr>
+<tr class="c2-mt__nat"><td class="c2-mt__name">全國</td><td class="num">809,528</td><td class="num pct">+2.1%</td><td class="num">793,123</td><td class="num pct">基準</td><td class="num">757,318</td><td class="num pct">-4.5%</td><td class="num">716,473</td><td class="num pct">-9.7%</td><td class="num">602,344</td><td class="num pct">-24%</td></tr></tbody>
+      </table>
+      <div class="c2-mt__band"><span class="c2-mt__band-l">高階產品受影響較小</span><span class="c2-mt__band-v">預估衝擊</span><span class="c2-mt__band-p">&nbsp;−12%</span></div>
+      <div class="foot is-cleared"><br></div>
+    </div>
+  </section>
+
+  <section class="slide probe-breather" style="background:#004B24;">
+    <img class="c2-close__img" src="assets/close-momentum.png" alt="">
+    <div class="page-label"><span class="page-label__num">08</span><span class="page-label__bar"></span><span>第二章結論</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame c2-close">
+      <div class="c2-close__big">必須<span class="hi">轉型提升動能</span></div>
+      <div class="c2-close__line">增加「規模化」較容易的業務</div>
+      <div class="c2-close__next">授權・數位・海外</div>
+    </div>
+  </section>
+
+  <section class="slide probe-chapter" style="background:#FEF4E8;">
+    <div class="probe-chapter__left probe-chapter__left--img"><img class="probe-chapter__img" src="assets/chapter-03-tree.png" alt="一棵老樹抽出三根新枝，掛著平板、教材、地球"><div class="probe-chapter__num probe-chapter__num--stamp">03</div></div>
+    <div class="probe-chapter__right">
+      <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+      <div class="probe-chapter__label">CHAPTER 03</div>
+      <div class="probe-chapter__title">數位、授權、海外</div>
+      <div class="probe-chapter__sub is-cleared"><br></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">10</span><span class="page-label__bar"></span><span>市場矩陣</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">教育市場矩陣</div>
+      <div class="chart"><svg viewBox="0 0 1000 500" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" font-family="inherit" role="img" aria-label="實體線上乘國小國中四象限">
+<defs><marker id="mxar" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4 L0,8 z" fill="#B5B5B5"/></marker><linearGradient id="mxmix" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2C7A2E"/><stop offset="1" stop-color="#097881"/></linearGradient></defs>
+<line x1="118" y1="464" x2="966" y2="464" stroke="#B5B5B5" stroke-width="2.5" marker-end="url(#mxar)"/>
+<line x1="118" y1="464" x2="118" y2="18" stroke="#B5B5B5" stroke-width="2.5" marker-end="url(#mxar)"/>
+<text x="345" y="498" text-anchor="middle" font-size="24" font-weight="900" fill="#757070">實體</text>
+<text x="750" y="498" text-anchor="middle" font-size="24" font-weight="900" fill="#757070">線上</text>
+<text x="102" y="146" text-anchor="end" font-size="24" font-weight="900" fill="#757070">國中</text>
+<text x="102" y="357" text-anchor="end" font-size="24" font-weight="900" fill="#757070">國小</text>
+<g class="mx-hot" data-goto="15" role="link" aria-label="跳到 NUMiNAI">
+<rect x="550" y="26" width="410" height="422" rx="10" fill="#097881" stroke="#097881" stroke-width="3" data-reveal data-seq="2" data-anim="right"/>
+<text x="580" y="78" text-anchor="start" font-size="24" font-weight="700" fill="rgba(255,255,255,0.82)" data-reveal data-seq="2">線上 × 國小＋國中</text>
+<text x="580" y="146" text-anchor="start" font-size="54" font-weight="900" fill="#FFFFFF" data-reveal data-seq="2">NUMiNAI</text>
+<text x="580" y="192" text-anchor="start" font-size="23" font-weight="700" fill="rgba(255,255,255,0.9)" data-reveal data-seq="2">訂閱制</text>
+<line x1="580" y1="250" x2="920" y2="250" stroke="rgba(255,255,255,0.35)" stroke-width="2" data-reveal data-seq="2" data-anim="fade"/>
+<text x="580" y="300" text-anchor="start" font-size="23" font-weight="700" fill="rgba(255,255,255,0.9)" data-reveal data-seq="2">國中：尚未少子化</text>
+<text x="580" y="342" text-anchor="start" font-size="23" font-weight="700" fill="rgba(255,255,255,0.9)" data-reveal data-seq="2">國小：現有客群</text>
+<text x="580" y="402" text-anchor="start" font-size="28" font-weight="900" fill="#C0E9E2" data-reveal data-seq="2">第二條成長曲線</text>
+<rect x="150" y="26" width="372" height="210" rx="10" fill="url(#mxmix)" stroke="#097881" stroke-width="3" data-reveal data-seq="3" data-anim="up"/>
+<text x="180" y="74" text-anchor="start" font-size="24" font-weight="700" fill="rgba(255,255,255,0.82)" data-reveal data-seq="3">實體 × 國中</text>
+<text x="180" y="130" text-anchor="start" font-size="30" font-weight="900" fill="#FFFFFF" data-reveal data-seq="3">學習診斷、家長課</text>
+<text x="180" y="172" text-anchor="start" font-size="27" font-weight="900" fill="#FFFFFF" data-reveal data-seq="3">AI 時代的學習思維與方法</text>
+<text x="180" y="212" text-anchor="start" font-size="22" font-weight="700" fill="#C0E9E2" data-reveal data-seq="3">環繞 NUMiNAI 的新服務</text>
+</g>
+<g class="mx-hot" data-goto="19" role="link" aria-label="跳到授權">
+<rect x="150" y="250" width="372" height="198" rx="10" fill="#E1F0E1" stroke="#379C39" stroke-width="3" data-reveal data-seq="1" data-anim="pop"/>
+<text x="176" y="288" text-anchor="start" font-size="27" font-weight="900" fill="#2C7A2E" data-reveal data-seq="1">授權</text>
+<text x="242" y="288" text-anchor="start" font-size="21" font-weight="700" fill="#4E8B50" data-reveal data-seq="1"></text>
+<rect x="166" y="306" width="340" height="124" rx="10" fill="#004B24" stroke="#004B24" stroke-width="3" data-seq="1" data-anim="pop"/>
+<rect x="184" y="320" width="118" height="32" rx="16" fill="#E8FF3A" data-seq="1" data-anim="pop"/>
+<text x="243" y="342" text-anchor="middle" font-size="20" font-weight="900" fill="#0A0A0A" data-seq="1">我們在這裡</text>
+<text x="184" y="384" text-anchor="start" font-size="21" font-weight="700" fill="rgba(255,255,255,0.82)" data-seq="1">實體 × 國小</text>
+<text x="184" y="422" text-anchor="start" font-size="29" font-weight="900" fill="#FFFFFF" data-seq="1">營隊・思考課・共學</text>
+</g>
+</svg></div>
+      <div class="biphint is-cleared"><br></div>
+    </div>
+  </section>
+
+  <section class="slide nm-light" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">11</span><span class="page-label__bar"></span><span>數位・NUMiNAI</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">從情意到精熟的Total Solution</div>
+      <div class="d0-body">
+        <div class="d0-fig"><svg viewBox="150 30 700 670" preserveAspectRatio="xMidYMid meet" role="img" aria-label="好用、好學、好玩三個圓指向中心的精熟數學">
+<defs><linearGradient id="d0g-core" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#82D3C6"/><stop offset="1" stop-color="#0AACA3"/></linearGradient></defs>
+<circle cx="500" cy="425" r="272" fill="#ECF8F6"/>
+<g data-seq="1" data-anim="pop"><circle cx="500" cy="125" r="84" fill="#FFFFFF" stroke="#0AACA3" stroke-width="7"/>
+<text x="500" y="125" text-anchor="middle" dominant-baseline="central" font-size="50" font-weight="900" letter-spacing="3" fill="#3F3F3F">好用</text></g>
+<g data-seq="1" data-anim="pop"><circle cx="240" cy="575" r="84" fill="#FFFFFF" stroke="#0AACA3" stroke-width="7"/>
+<text x="240" y="575" text-anchor="middle" dominant-baseline="central" font-size="50" font-weight="900" letter-spacing="3" fill="#3F3F3F">好學</text></g>
+<g data-seq="1" data-anim="pop"><circle cx="760" cy="575" r="84" fill="#FFFFFF" stroke="#0AACA3" stroke-width="7"/>
+<text x="760" y="575" text-anchor="middle" dominant-baseline="central" font-size="50" font-weight="900" letter-spacing="3" fill="#3F3F3F">好玩</text></g>
+<g data-seq="2" data-anim="in-y" data-reveal><g transform="translate(500,425) rotate(0)"><polygon points="-24,-206 24,-206 24,-135 50,-135 0,-95 -50,-135 -24,-135" fill="#097881"/></g>
+<g transform="translate(500,425) rotate(-120)"><polygon points="-24,-206 24,-206 24,-135 50,-135 0,-95 -50,-135 -24,-135" fill="#097881"/></g>
+<g transform="translate(500,425) rotate(120)"><polygon points="-24,-206 24,-206 24,-135 50,-135 0,-95 -50,-135 -24,-135" fill="#097881"/></g></g>
+<g data-seq="3" data-anim="pop" data-reveal><circle cx="500" cy="425" r="112" fill="url(#d0g-core)"/>
+<text x="500" y="425" text-anchor="middle" dominant-baseline="central" font-size="40" font-weight="900" letter-spacing="6" fill="#FFFFFF">精熟數學</text></g>
+</svg></div>
+        <div class="d0-side">
+          <div class="d0-kpi" data-reveal><div class="d0-kpi__n">近 1,000<small>萬</small></div><div class="d0-kpi__l">研發投入</div></div>
+          <div class="d0-card"><div class="d0-card__t">過去：只做情意面</div><div class="d0-card__b">好用、好玩、好學。我們<b>不追求精熟數學</b>。</div></div>
+          <div class="d0-card" data-reveal><div class="d0-card__t">破壞式創新： AI + 真人學習診斷</div><div class="d0-card__b"><b>更快、更便宜、更輕鬆&nbsp;</b>學好數學</div></div>
+        </div>
+      </div>
+      <div class="foot is-cleared"><br></div>
+    </div>
+  </section>
+
+  <section class="slide nm-page" style="background:#06565C;">
+    <div class="page-label"><span class="page-label__num">12</span><span class="page-label__bar"></span><span>數位・NUMiNAI</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="nm-head">
+        <div><div class="nm-title">NUMiNAI 上線</div><div class="nm-sub">2026 /8/24&nbsp; 訂閱制學習型AI&nbsp;</div></div>
+        <img class="nm-wordmark" src="assets/numinai/logo-wordmark.svg" alt="NUMiNAI">
+      </div>
+      <div class="nm-body">
+        <div><div class="nm-lead">推廣管道</div><div class="nm-cards"><div class="nm-card"><div class="nm-card__no">01</div><div class="nm-card__t">整合實體客群</div><div class="nm-card__s">營隊、思考課、共學</div></div><div class="nm-card"><div class="nm-card__no">02</div><div class="nm-card__t">專案推廣</div><div class="nm-card__s">考前複習卷、AI 數感盃</div></div><div class="nm-card"><div class="nm-card__no">03</div><div class="nm-card__t">數位廣告＋KOL</div><div class="nm-card__s">全年投放、KOL 合作</div></div></div></div>
+        <img class="nm-mascot" src="assets/numinai/pose-crown.svg" alt="NUMiNAI 吉祥物">
+      </div>
+      <div class="nm-goal" data-reveal><span class="nm-goal__l">長期目標</span><span class="nm-goal__n">每月 200<small>位</small></span><span class="nm-goal__v">新訂閱</span></div>
+      <div class="foot is-cleared"><br></div>
+    </div>
+  </section>
+
+  <section class="slide nm-light" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">13</span><span class="page-label__bar"></span><span>數位・NUMiNAI</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">NUMiNAI的實體搭擋</div>
+      <div class="ar-wrap">
+        <div class="ar-core"><img src="assets/numinai/logo-wordmark.svg" alt="NUMiNAI"><div class="ar-core__s">AI 數感學習平台</div></div>
+        <div class="ar-list"><div class="ar-card" data-reveal data-seq="1"><div class="ar-card__no">1</div><div><div class="ar-card__t">「AI 時代的學習思維與方法」2 日營</div><div class="ar-card__b">整合學習思維與方法的課程</div></div></div><div class="ar-card" data-reveal data-seq="2"><div class="ar-card__no">2</div><div><div class="ar-card__t">學習診斷</div><div class="ar-card__b">根據孩子使用 NUMiNAI 的狀況，<b>定期見面</b>給予建議與指導。</div></div></div><div class="ar-card" data-reveal data-seq="3"><div class="ar-card__no">3</div><div><div class="ar-card__t">家長每學期的數學啟蒙課</div><div class="ar-card__b">每學期 <b>3~6小時</b>，介紹這學期的重要數學觀念，讓他們知道該怎麼陪伴小孩。</div></div></div></div>
+      </div>
+      <div class="foot">學習診斷與家長啟蒙課是真人服務；頻率、定價與人力待定。</div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">14</span><span class="page-label__bar"></span><span>市場矩陣</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">教育市場矩陣</div>
+      <div class="chart"><svg viewBox="0 0 1000 500" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" font-family="inherit" role="img" aria-label="實體線上乘國小國中四象限">
+<defs><marker id="mxarb" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4 L0,8 z" fill="#B5B5B5"/></marker><linearGradient id="mxmixb" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#2C7A2E"/><stop offset="1" stop-color="#097881"/></linearGradient></defs>
+<line x1="118" y1="464" x2="966" y2="464" stroke="#B5B5B5" stroke-width="2.5" marker-end="url(#mxarb)"/>
+<line x1="118" y1="464" x2="118" y2="18" stroke="#B5B5B5" stroke-width="2.5" marker-end="url(#mxarb)"/>
+<text x="345" y="498" text-anchor="middle" font-size="24" font-weight="900" fill="#757070">實體</text>
+<text x="750" y="498" text-anchor="middle" font-size="24" font-weight="900" fill="#757070">線上</text>
+<text x="102" y="146" text-anchor="end" font-size="24" font-weight="900" fill="#757070">國中</text>
+<text x="102" y="357" text-anchor="end" font-size="24" font-weight="900" fill="#757070">國小</text>
+<g class="mx-hot" data-goto="15" role="link" aria-label="跳到 NUMiNAI">
+<rect x="550" y="26" width="410" height="422" rx="10" fill="#097881" stroke="#097881" stroke-width="3"/>
+<text x="580" y="78" text-anchor="start" font-size="24" font-weight="700" fill="rgba(255,255,255,0.82)">線上 × 國小＋國中</text>
+<text x="580" y="146" text-anchor="start" font-size="54" font-weight="900" fill="#FFFFFF">NUMiNAI</text>
+<text x="580" y="192" text-anchor="start" font-size="23" font-weight="700" fill="rgba(255,255,255,0.9)">訂閱制</text>
+<line x1="580" y1="250" x2="920" y2="250" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+<text x="580" y="300" text-anchor="start" font-size="23" font-weight="700" fill="rgba(255,255,255,0.9)">國中：尚未少子化</text>
+<text x="580" y="342" text-anchor="start" font-size="23" font-weight="700" fill="rgba(255,255,255,0.9)">國小：現有客群</text>
+<text x="580" y="402" text-anchor="start" font-size="28" font-weight="900" fill="#C0E9E2">第二條成長曲線</text>
+<rect x="150" y="26" width="372" height="210" rx="10" fill="url(#mxmixb)" stroke="#097881" stroke-width="3"/>
+<text x="180" y="74" text-anchor="start" font-size="24" font-weight="700" fill="rgba(255,255,255,0.82)">實體 × 國中</text>
+<text x="180" y="130" text-anchor="start" font-size="30" font-weight="900" fill="#FFFFFF">學習診斷、家長課</text>
+<text x="180" y="172" text-anchor="start" font-size="27" font-weight="900" fill="#FFFFFF">AI 時代的學習思維與方法</text>
+<text x="180" y="212" text-anchor="start" font-size="22" font-weight="700" fill="#C0E9E2">環繞 NUMiNAI 的新服務</text>
+</g>
+<g class="mx-hot" data-goto="19" role="link" aria-label="跳到授權">
+<rect x="150" y="250" width="372" height="198" rx="10" fill="#E1F0E1" stroke="#379C39" stroke-width="3" data-reveal data-seq="1" data-anim="pop"/>
+<text x="176" y="288" text-anchor="start" font-size="27" font-weight="900" fill="#2C7A2E" data-reveal data-seq="1">授權</text>
+<text x="242" y="288" text-anchor="start" font-size="21" font-weight="700" fill="#4E8B50" data-reveal data-seq="1"></text>
+<rect x="166" y="306" width="340" height="124" rx="10" fill="#004B24" stroke="#004B24" stroke-width="3"/>
+<rect x="184" y="320" width="118" height="32" rx="16" fill="#E8FF3A"/>
+<text x="243" y="342" text-anchor="middle" font-size="20" font-weight="900" fill="#0A0A0A">我們在這裡</text>
+<text x="184" y="384" text-anchor="start" font-size="21" font-weight="700" fill="rgba(255,255,255,0.82)">實體 × 國小</text>
+<text x="184" y="422" text-anchor="start" font-size="29" font-weight="900" fill="#FFFFFF">營隊・思考課・共學</text>
+</g>
+</svg></div>
+      <div class="biphint is-cleared"><br></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">15</span><span class="page-label__bar"></span><span>合辦方案</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">授權機制</div>
+      <div class="offer"><div class="offer__col offer__col--us"><div class="offer__head">必採購</div><div class="offer__row"><div class="offer__k">課程教材</div><div class="offer__s">教師手冊＋教具包</div><div class="offer__p">3,500／生</div></div><div class="offer__row"><div class="offer__k">師培</div><div class="offer__s">線上 13 節＋實體 2 日</div><div class="offer__p">20,000／人</div></div><div class="offer__row"><div class="offer__k">開班交接</div><div class="offer__s">課前共備＋現場交接</div><div class="offer__p">5,000／梯</div></div></div><div class="offer__col offer__col--opt"><div class="offer__head">選配</div><div class="offer__row"><div class="offer__k">招生</div><div class="offer__s">網路投放＋報名系統</div><div class="offer__p">2,000／生</div></div><div class="offer__row"><div class="offer__k">金流代收</div><div class="offer__s">含在招生服務裡</div><div class="offer__p"></div></div></div><div class="offer__col offer__col--them"><div class="offer__head">合作方自備</div><div class="offer__row"><div class="offer__k">場地</div><div class="offer__s"></div><div class="offer__p"></div></div><div class="offer__row"><div class="offer__k">老師</div><div class="offer__s">至少一位通過師培</div><div class="offer__p"></div></div><div class="offer__row"><div class="offer__k">行政</div><div class="offer__s is-cleared"><br></div><div class="offer__p"></div></div></div></div>
+      <div class="offer-where" data-reveal>
+        <div class="offer-where__cell"><span class="offer-where__l">候選</span><span class="offer-where__v"><b>宜蘭・苗栗頭份・彰化員林・嘉義市・屏東市</b><br>避開直營的營隊地區</span></div>
+        <div class="offer-where__cell"><span class="offer-where__l">B2B</span><span class="offer-where__v">網路宣傳 ＋人脈<br>業務 owner：<b>課程發展部</b></span></div>
+      </div>
+      <div class="foot is-cleared"><br></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">16</span><span class="page-label__bar"></span><span>授權時程</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">目標：2027夏令營 （許願思考課）</div>
+      <div class="chart"><svg viewBox="0 0 1060 222" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" font-family="inherit" role="img" aria-label="授權時程：2026 年 10 月到 2027 年 9 月">
+<defs><marker id="msar" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L11,5 L0,10 z" fill="#B5B5B5"/></marker></defs>
+<rect x="679" y="152" width="142" height="32" fill="#E1F0E1"/>
+<line x1="40" y1="168" x2="898" y2="168" stroke="#CFCFCF" stroke-width="3" marker-end="url(#msar)"/>
+<line x1="40" y1="162" x2="40" y2="174" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="75" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#6A6A6A">10 月</text>
+<line x1="111" y1="162" x2="111" y2="174" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="146" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#6A6A6A">11 月</text>
+<line x1="182" y1="162" x2="182" y2="174" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="217" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#6A6A6A">12 月</text>
+<line x1="253" y1="162" x2="253" y2="174" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="288" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#6A6A6A">1 月</text>
+<line x1="324" y1="162" x2="324" y2="174" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="359" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#6A6A6A">2 月</text>
+<line x1="395" y1="162" x2="395" y2="174" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="430" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#6A6A6A">3 月</text>
+<line x1="466" y1="162" x2="466" y2="174" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="501" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#6A6A6A">4 月</text>
+<line x1="537" y1="162" x2="537" y2="174" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="572" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#6A6A6A">5 月</text>
+<line x1="608" y1="162" x2="608" y2="174" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="643" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#6A6A6A">6 月</text>
+<line x1="679" y1="162" x2="679" y2="174" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="714" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#6A6A6A">7 月</text>
+<line x1="750" y1="162" x2="750" y2="174" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="785" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#6A6A6A">8 月</text>
+<line x1="821" y1="162" x2="821" y2="174" stroke="#BDBDBD" stroke-width="1.5"/>
+<text x="856" y="192" text-anchor="middle" font-size="13" font-weight="700" fill="#6A6A6A">9 月</text>
+<text x="146" y="210" text-anchor="middle" font-size="12" font-weight="700" fill="#9A9A9A">2026</text>
+<text x="501" y="210" text-anchor="middle" font-size="12" font-weight="700" fill="#9A9A9A">2027</text>
+<text x="750" y="210" text-anchor="middle" font-size="12" font-weight="900" fill="#379C39">暑假</text>
+<line x1="324" y1="154" x2="324" y2="182" stroke="#B8412E" stroke-width="3.5"/>
+<line x1="466" y1="154" x2="466" y2="182" stroke="#B8412E" stroke-width="3.5"/>
+<text x="466" y="146" text-anchor="middle" font-size="12" font-weight="900" fill="#B8412E">3 月底確立細節</text>
+<rect x="40" y="20" width="134" height="92" rx="10" fill="#FFFFFF" stroke="#379C39" stroke-width="2.5"/>
+<text x="107" y="54" text-anchor="middle" font-size="18" font-weight="900" fill="#004B24">宣傳上線</text>
+<text x="107" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#5A5A5A">方案・合約定稿</text>
+<text x="107" y="98" text-anchor="middle" font-size="14" font-weight="700" fill="#5A5A5A">師培＋合辦招募</text>
+<path d="M107,112 L107,134 L75,134 L75,160" fill="none" stroke="#B5B5B5" stroke-width="2"/>
+<circle cx="75" cy="168" r="5" fill="#B5B5B5" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="186" y="20" width="134" height="92" rx="10" fill="#FFFFFF" stroke="#379C39" stroke-width="2.5"/>
+<text x="253" y="54" text-anchor="middle" font-size="18" font-weight="900" fill="#004B24">師培第一梯</text>
+<text x="253" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#5A5A5A">12 月</text>
+<text x="253" y="98" text-anchor="middle" font-size="14" font-weight="700" fill="#5A5A5A">對外招來的老師</text>
+<path d="M253,112 L253,134 L217,134 L217,160" fill="none" stroke="#B5B5B5" stroke-width="2"/>
+<circle cx="217" cy="168" r="5" fill="#B5B5B5" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="332" y="20" width="134" height="92" rx="10" fill="#FFFFFF" stroke="#B8412E" stroke-width="3"/>
+<text x="399" y="54" text-anchor="middle" font-size="18" font-weight="900" fill="#B8412E">簽第一間</text>
+<text x="399" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#B8412E">1 月底</text>
+<text x="399" y="98" text-anchor="middle" font-size="14" font-weight="700" fill="#B8412E"></text>
+<path d="M399,112 L399,134 L324,134 L324,160" fill="none" stroke="#B8412E" stroke-width="2"/>
+<circle cx="324" cy="168" r="5" fill="#B8412E" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="478" y="20" width="134" height="92" rx="10" fill="#FFFFFF" stroke="#379C39" stroke-width="2.5"/>
+<text x="545" y="54" text-anchor="middle" font-size="18" font-weight="900" fill="#004B24">夥伴招生</text>
+<text x="545" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#5A5A5A">4–6 月・收訂金</text>
+<text x="545" y="98" text-anchor="middle" font-size="14" font-weight="700" fill="#5A5A5A"></text>
+<path d="M545,112 L545,134 L572,134 L572,160" fill="none" stroke="#B5B5B5" stroke-width="2"/>
+<circle cx="572" cy="168" r="5" fill="#B5B5B5" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="624" y="20" width="134" height="92" rx="10" fill="#004B24" stroke="#004B24" stroke-width="3"/>
+<text x="691" y="54" text-anchor="middle" font-size="18" font-weight="900" fill="#FFFFFF">授權開班</text>
+<text x="691" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#D8E8D8"></text>
+<text x="691" y="98" text-anchor="middle" font-size="14" font-weight="700" fill="#D8E8D8"></text>
+<path d="M691,112 L691,134 L750,134 L750,160" fill="none" stroke="#004B24" stroke-width="2"/>
+<circle cx="750" cy="168" r="5" fill="#004B24" stroke="#FFFFFF" stroke-width="2"/>
+<rect x="770" y="20" width="134" height="92" rx="10" fill="#FFFFFF" stroke="#379C39" stroke-width="2.5"/>
+<text x="837" y="54" text-anchor="middle" font-size="18" font-weight="900" fill="#004B24">檢討</text>
+<text x="837" y="78" text-anchor="middle" font-size="14" font-weight="700" fill="#5A5A5A">9 月</text>
+<text x="837" y="98" text-anchor="middle" font-size="14" font-weight="700" fill="#5A5A5A"></text>
+<path d="M837,112 L837,134 L856,134 L856,160" fill="none" stroke="#B5B5B5" stroke-width="2"/>
+<circle cx="856" cy="168" r="5" fill="#B5B5B5" stroke="#FFFFFF" stroke-width="2"/>
+<circle cx="466" cy="168" r="5" fill="#B8412E" stroke="#FFFFFF" stroke-width="2"/>
+<g data-reveal>
+<rect x="643" y="2" width="96" height="26" rx="13" fill="#E8FF3A"/>
+<text x="691" y="20" text-anchor="middle" font-size="15" font-weight="900" fill="#0A0A0A">必須達成</text>
+<rect x="912" y="20" width="142" height="92" rx="10" fill="#379C39" stroke="#379C39" stroke-width="3"/>
+<rect x="939" y="30" width="88" height="22" rx="11" fill="rgba(255,255,255,0.24)"/>
+<text x="983" y="46" text-anchor="middle" font-size="13" font-weight="900" fill="#FFFFFF">努力目標</text>
+<text x="983" y="74" text-anchor="middle" font-size="13" font-weight="700" fill="#D8E8D8">2027 秋</text>
+<text x="983" y="98" text-anchor="middle" font-size="17" font-weight="900" fill="#FFFFFF">思考課授權</text>
+<rect x="912" y="124" width="142" height="92" rx="10" fill="#EEF6EE" stroke="#BDD6BE" stroke-width="3" stroke-dasharray="9 7"/>
+<rect x="939" y="134" width="88" height="22" rx="11" fill="#FFFFFF"/>
+<text x="983" y="150" text-anchor="middle" font-size="13" font-weight="900" fill="#7A9E7B">希望達成</text>
+<text x="983" y="178" text-anchor="middle" font-size="13" font-weight="700" fill="#9DB89E">2028 秋</text>
+<text x="983" y="202" text-anchor="middle" font-size="17" font-weight="900" fill="#7A9E7B">美數學院授權</text>
+</g>
+</svg></div>
+      <div class="msask"><span class="msask__l">討論</span><span class="msask__q">時程、與跨部門合作</span></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">17</span><span class="page-label__bar"></span><span>授權系統・完成體</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">理想的授權系統（~2028完成）</div>
+      <div class="chart"><svg viewBox="8 28 1058 456" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" font-family="inherit" role="img" aria-label="授權架構圖">
+<defs><marker id="lar" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L11,5 L0,10 z" fill="#379C39"/></marker><marker id="lam" markerWidth="12" markerHeight="12" refX="10" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L11,5 L0,10 z" fill="#A87C21"/></marker><marker id="lal" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4 L0,8 z" fill="#D8C79B"/></marker><marker id="lamd" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4 L0,8 z" fill="#D8C79B"/></marker><marker id="lald" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,4 L0,8 z" fill="#BDD6BE"/></marker></defs>
+<rect x="24" y="44" width="536" height="424" rx="16" fill="#FBFBF9" stroke="#CFCFCF" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="40" y="74" text-anchor="start" font-size="22" font-weight="700" fill="#9A9A9A">數感的系統</text>
+<text x="544" y="74" text-anchor="end" font-size="17" font-weight="700" fill="#B5B5B5">虛線 ＝ 下一階段</text>
+<rect x="292" y="74" width="260" height="288" rx="14" fill="#FFFFFF" stroke="#DADADA" stroke-width="2"/>
+<text x="302" y="96" text-anchor="start" font-size="20" font-weight="900" fill="#9A9A9A">授權平台</text>
+<rect x="302" y="106" width="240" height="72" rx="10" fill="#FDF8EC" stroke="#A87C21" stroke-width="3"/>
+<text x="422" y="136" text-anchor="middle" font-size="24" font-weight="900" fill="#A87C21">班務系統</text>
+<text x="422" y="156" text-anchor="middle" font-size="14" font-weight="700" fill="#7A6636">帳號・排課・出缺席</text>
+<text x="422" y="173" text-anchor="middle" font-size="14" font-weight="700" fill="#7A6636">親師聯絡・學習紀錄</text>
+<rect x="302" y="202" width="240" height="58" rx="10" fill="#FDFBF5" stroke="#D8C79B" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="422" y="228" text-anchor="middle" font-size="22" font-weight="900" fill="#B89B5E">品管分析</text>
+<text x="422" y="248" text-anchor="middle" font-size="14" font-weight="700" fill="#C2AE83">把資料變成品質指標</text>
+<rect x="302" y="280" width="240" height="72" rx="10" fill="#379C39" stroke="#379C39" stroke-width="3"/>
+<text x="422" y="310" text-anchor="middle" font-size="24" font-weight="900" fill="#FFFFFF">教學系統</text>
+<text x="422" y="334" text-anchor="middle" font-size="15" font-weight="700" fill="rgba(255,255,255,0.9)">數位教材・課堂・作答</text>
+<rect x="46" y="196" width="224" height="104" rx="10" fill="#004B24" stroke="#004B24" stroke-width="3"/>
+<text x="158" y="238" text-anchor="middle" font-size="25" font-weight="900" fill="#FFFFFF">虛實整合的教材</text>
+<text x="158" y="270" text-anchor="middle" font-size="15" font-weight="700" fill="rgba(255,255,255,0.8)">實體教具・學習單＋數位內容</text>
+<rect x="292" y="376" width="260" height="84" rx="10" fill="#FFFFFF" stroke="#379C39" stroke-width="3"/>
+<text x="422" y="410" text-anchor="middle" font-size="28" font-weight="900" fill="#379C39">師培</text>
+<text x="422" y="438" text-anchor="middle" font-size="19" font-weight="700" fill="#5A5A5A">共同的上課標準</text>
+<rect x="46" y="376" width="224" height="84" rx="10" fill="#F7FAF7" stroke="#BDD6BE" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="158" y="410" text-anchor="middle" font-size="27" font-weight="900" fill="#8FAF90">AI</text>
+<text x="158" y="438" text-anchor="middle" font-size="18" font-weight="700" fill="#9EBB9F">虛擬學生・虛擬專家</text>
+<line x1="270" y1="268" x2="296" y2="302" stroke="#379C39" stroke-width="3.5" marker-end="url(#lar)"/>
+<line x1="422" y1="376" x2="422" y2="360" stroke="#379C39" stroke-width="3.5" marker-end="url(#lar)"/>
+<line x1="422" y1="180" x2="422" y2="198" stroke="#D8C79B" stroke-width="2.5" marker-end="url(#lamd)" stroke-dasharray="7 6"/>
+<line x1="158" y1="376" x2="158" y2="308" stroke="#BDD6BE" stroke-width="2.5" marker-end="url(#lald)" stroke-dasharray="7 6"/>
+<line x1="270" y1="418" x2="288" y2="418" stroke="#BDD6BE" stroke-width="2.5" marker-end="url(#lald)" stroke-dasharray="7 6"/>
+<g data-reveal>
+<rect x="750" y="122" width="300" height="300" rx="16" fill="#FBFBF9" stroke="#CFCFCF" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="766" y="154" text-anchor="start" font-size="22" font-weight="700" fill="#9A9A9A">取得授權的機構</text>
+<rect x="770" y="172" width="260" height="58" rx="10" fill="#FFFFFF" stroke="#CFCFCF" stroke-width="2"/>
+<text x="900" y="209" text-anchor="middle" font-size="24" font-weight="700" fill="#5A5A5A">學校</text>
+<rect x="770" y="246" width="260" height="58" rx="10" fill="#FFFFFF" stroke="#CFCFCF" stroke-width="2"/>
+<text x="900" y="283" text-anchor="middle" font-size="24" font-weight="700" fill="#5A5A5A">補習班</text>
+<rect x="770" y="320" width="260" height="58" rx="10" fill="#FFFFFF" stroke="#CFCFCF" stroke-width="2"/>
+<text x="900" y="357" text-anchor="middle" font-size="24" font-weight="700" fill="#5A5A5A">其他教育機構</text>
+<line x1="744" y1="142" x2="550" y2="142" stroke="#A87C21" stroke-width="4.0" marker-end="url(#lam)"/>
+<text x="655" y="110" text-anchor="middle" font-size="23" font-weight="900" fill="#A87C21">資料回流</text>
+<text x="655" y="172" text-anchor="middle" font-size="15" font-weight="700" fill="#C2A86B">出缺席・作答</text>
+<text x="655" y="194" text-anchor="middle" font-size="15" font-weight="700" fill="#C2A86B">學習單・親師互動</text>
+<line x1="566" y1="316" x2="744" y2="316" stroke="#379C39" stroke-width="4.0" marker-end="url(#lar)"/>
+<text x="655" y="302" text-anchor="middle" font-size="23" font-weight="900" fill="#379C39">授權</text>
+<text x="655" y="350" text-anchor="middle" font-size="15" font-weight="700" fill="#7A9E7B">課程・教材・系統</text>
+</g>
+</svg></div>
+      <div class="archnote" data-reveal>授權關鍵：<b>品質</b>→品質關鍵：<b>資料回流</b>→資料回流關鍵：<b>資料數位化</b></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">18</span><span class="page-label__bar"></span><span>六個項目誰來接</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">六個項目・分工</div>
+      <div class="chart"><svg class="bip" viewBox="0 0 1000 440" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" font-family="inherit" role="img" aria-label="各單位與要做的事的對應">
+<g data-reveal data-anim="draw">
+<path class="bip__link" data-i="教材" data-d="內容組" d="M 340,55 C 470,55 530,55 660,55"/>
+<path class="bip__link" data-i="教材" data-d="教學部" d="M 340,265 C 470,265 530,55 660,55"/>
+<path class="bip__link" data-i="教學系統" data-d="內容組" d="M 340,55 C 470,55 530,125 660,125"/>
+<path class="bip__link" data-i="教學系統" data-d="軟體開發組" d="M 340,125 C 470,125 530,125 660,125"/>
+<path class="bip__link" data-i="教學系統" data-d="教學部" d="M 340,265 C 470,265 530,125 660,125"/>
+<path class="bip__link" data-i="班務系統" data-d="軟體開發組" d="M 340,125 C 470,125 530,195 660,195"/>
+<path class="bip__link" data-i="班務系統" data-d="課程發展部" d="M 340,195 C 470,195 530,195 660,195"/>
+<path class="bip__link" data-i="師培" data-d="內容組" d="M 340,55 C 470,55 530,265 660,265"/>
+<path class="bip__link" data-i="師培" data-d="教學部" d="M 340,265 C 470,265 530,265 660,265"/>
+<path class="bip__link" data-i="師培" data-d="品牌行銷部" d="M 340,335 C 470,335 530,265 660,265"/>
+<path class="bip__link" data-i="B2B 推廣" data-d="課程發展部" d="M 340,195 C 470,195 530,335 660,335"/>
+<path class="bip__link" data-i="B2B 推廣" data-d="品牌行銷部" d="M 340,335 C 470,335 530,335 660,335"/>
+<path class="bip__link" data-i="商務" data-d="執行長室" d="M 340,405 C 470,405 530,405 660,405"/>
+<path class="bip__link" data-i="商務" data-d="課程發展部" d="M 340,195 C 470,195 530,405 660,405"/>
+<path class="bip__link" data-i="商務" data-d="品牌行銷部" d="M 340,335 C 470,335 530,405 660,405"/>
+</g>
+<g class="bip__node bip__node--dept" data-side="d" data-key="內容組">
+<rect class="bip__box" x="50" y="26" width="290" height="58" rx="10" fill="#EEF6EE" stroke="#379C39" stroke-width="3"/>
+<text class="bip__t" x="195" y="58" text-anchor="middle" font-size="25" font-weight="900" fill="#2C7A2E">內容組</text>
+<text class="bip__s" x="195" y="74" text-anchor="middle" font-size="14" fill="#7A9E7B">研發部</text>
+</g>
+<g class="bip__node bip__node--dept" data-side="d" data-key="軟體開發組">
+<rect class="bip__box" x="50" y="96" width="290" height="58" rx="10" fill="#EEF6EE" stroke="#379C39" stroke-width="3"/>
+<text class="bip__t" x="195" y="128" text-anchor="middle" font-size="25" font-weight="900" fill="#2C7A2E">軟體開發組</text>
+<text class="bip__s" x="195" y="144" text-anchor="middle" font-size="14" fill="#7A9E7B">研發部</text>
+</g>
+<g class="bip__node bip__node--dept" data-side="d" data-key="課程發展部">
+<rect class="bip__box" x="50" y="166" width="290" height="58" rx="10" fill="#EEF6EE" stroke="#379C39" stroke-width="3"/>
+<text class="bip__t" x="195" y="203" text-anchor="middle" font-size="25" font-weight="900" fill="#2C7A2E">課程發展部</text>
+</g>
+<g class="bip__node bip__node--dept" data-side="d" data-key="教學部">
+<rect class="bip__box" x="50" y="236" width="290" height="58" rx="10" fill="#EEF6EE" stroke="#379C39" stroke-width="3"/>
+<text class="bip__t" x="195" y="273" text-anchor="middle" font-size="25" font-weight="900" fill="#2C7A2E">教學部</text>
+</g>
+<g class="bip__node bip__node--dept" data-side="d" data-key="品牌行銷部">
+<rect class="bip__box" x="50" y="306" width="290" height="58" rx="10" fill="#EEF6EE" stroke="#379C39" stroke-width="3"/>
+<text class="bip__t" x="195" y="343" text-anchor="middle" font-size="25" font-weight="900" fill="#2C7A2E">品牌行銷部</text>
+</g>
+<g class="bip__node bip__node--dept" data-side="d" data-key="執行長室">
+<rect class="bip__box" x="50" y="376" width="290" height="58" rx="10" fill="#EEF6EE" stroke="#379C39" stroke-width="3"/>
+<text class="bip__t" x="195" y="413" text-anchor="middle" font-size="25" font-weight="900" fill="#2C7A2E">執行長室</text>
+</g>
+<g class="bip__node bip__node--item" data-side="i" data-key="教材">
+<rect class="bip__box" x="660" y="26" width="290" height="58" rx="10" fill="#FFFFFF" stroke="#004B24" stroke-width="3"/>
+<text class="bip__t" x="805" y="56" text-anchor="middle" font-size="25" font-weight="900" fill="#004B24">教材</text>
+<text class="bip__s" x="805" y="74" text-anchor="middle" font-size="14" fill="#8A8A8A">虛實整合的教材</text>
+</g>
+<g class="bip__node bip__node--item" data-side="i" data-key="教學系統">
+<rect class="bip__box" x="660" y="96" width="290" height="58" rx="10" fill="#FFFFFF" stroke="#004B24" stroke-width="3"/>
+<text class="bip__t" x="805" y="126" text-anchor="middle" font-size="25" font-weight="900" fill="#004B24">教學系統</text>
+<text class="bip__s" x="805" y="144" text-anchor="middle" font-size="14" fill="#8A8A8A">數位教材・課堂・作答</text>
+</g>
+<g class="bip__node bip__node--item" data-side="i" data-key="班務系統">
+<rect class="bip__box" x="660" y="166" width="290" height="58" rx="10" fill="#FFFFFF" stroke="#004B24" stroke-width="3"/>
+<text class="bip__t" x="805" y="196" text-anchor="middle" font-size="25" font-weight="900" fill="#004B24">班務系統</text>
+<text class="bip__s" x="805" y="214" text-anchor="middle" font-size="14" fill="#8A8A8A">帳號・排課・出缺席・親師聯絡</text>
+</g>
+<g class="bip__node bip__node--item" data-side="i" data-key="師培">
+<rect class="bip__box" x="660" y="236" width="290" height="58" rx="10" fill="#FFFFFF" stroke="#004B24" stroke-width="3"/>
+<text class="bip__t" x="805" y="266" text-anchor="middle" font-size="25" font-weight="900" fill="#004B24">師培</text>
+<text class="bip__s" x="805" y="284" text-anchor="middle" font-size="14" fill="#8A8A8A">共同的上課標準</text>
+</g>
+<g class="bip__node bip__node--item" data-side="i" data-key="B2B 推廣">
+<rect class="bip__box" x="660" y="306" width="290" height="58" rx="10" fill="#FFFFFF" stroke="#004B24" stroke-width="3"/>
+<text class="bip__t" x="805" y="336" text-anchor="middle" font-size="25" font-weight="900" fill="#004B24">B2B 推廣</text>
+<text class="bip__s" x="805" y="354" text-anchor="middle" font-size="14" fill="#8A8A8A">找到願意合辦的機構</text>
+</g>
+<g class="bip__node bip__node--item" data-side="i" data-key="商務">
+<rect class="bip__box" x="660" y="376" width="290" height="58" rx="10" fill="#FFFFFF" stroke="#004B24" stroke-width="3"/>
+<text class="bip__t" x="805" y="406" text-anchor="middle" font-size="25" font-weight="900" fill="#004B24">商務</text>
+<text class="bip__s" x="805" y="424" text-anchor="middle" font-size="14" fill="#8A8A8A">合約・定價・退場</text>
+</g>
+</svg></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">19</span><span class="page-label__bar"></span><span>數位・一個引擎</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">NUMiNAI 引擎的延伸服務</div>
+      <div class="d1-chart"><svg viewBox="0 0 1060 366" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" font-family="inherit" role="img" aria-label="數感的 AI 引擎接到三個出海口：NUMiNAI、出卷閱卷、教學與班務系統">
+<rect x="2" y="9" width="328" height="261" rx="14" fill="#FFFFFF" stroke="#004B24" stroke-width="3"/>
+<text x="166.0" y="47" text-anchor="middle" font-size="23" font-weight="900" fill="#004B24">數感的 AI 引擎</text>
+<rect x="18" y="65" width="296" height="40" rx="9" fill="#004B24"/>
+<text x="34" y="92" text-anchor="start" font-size="19" font-weight="900" fill="#FFFFFF">題庫暨教材生成</text>
+<rect x="208" y="74" width="92" height="22" rx="11" fill="#E8FF3A"/>
+<text x="254.0" y="90" text-anchor="middle" font-size="15" font-weight="900" fill="#0A0A0A">Must-have</text>
+<rect x="18" y="113" width="296" height="40" rx="9" fill="#F3F7F3" stroke="#DCE7DC" stroke-width="1.5"/>
+<text x="34" y="140" text-anchor="start" font-size="19" font-weight="700" fill="#334033">適性智慧家教</text>
+<text x="300" y="139" text-anchor="end" font-size="15" font-weight="700" fill="#9AAF9A">Good-to-have</text>
+<rect x="18" y="161" width="296" height="40" rx="9" fill="#F3F7F3" stroke="#DCE7DC" stroke-width="1.5"/>
+<text x="34" y="188" text-anchor="start" font-size="19" font-weight="700" fill="#334033">知識追蹤</text>
+<text x="300" y="187" text-anchor="end" font-size="15" font-weight="700" fill="#9AAF9A">Good-to-have</text>
+<rect x="18" y="209" width="296" height="40" rx="9" fill="#F3F7F3" stroke="#DCE7DC" stroke-width="1.5"/>
+<text x="34" y="236" text-anchor="start" font-size="19" font-weight="700" fill="#334033">角色扮演模擬器</text>
+<text x="300" y="235" text-anchor="end" font-size="15" font-weight="700" fill="#9AAF9A">Good-to-have</text>
+<text x="4" y="292" text-anchor="start" font-size="17" font-weight="700" fill="#6A6A6A">都已在 NUMiNAI 裡了——</text>
+<text x="4" y="315" text-anchor="start" font-size="17" font-weight="700" fill="#6A6A6A">如何抽出模組與調整</text>
+<line x1="340" y1="167" x2="398" y2="167" stroke="#379C39" stroke-width="6" stroke-linecap="round"/>
+<line x1="398" y1="59" x2="398" y2="275" stroke="#379C39" stroke-width="6" stroke-linecap="round"/>
+<line x1="398" y1="59" x2="460" y2="59" stroke="#379C39" stroke-width="6" stroke-linecap="round"/>
+<path d="M458,46 L478,59 L458,72 Z" fill="#379C39"/>
+<line x1="398" y1="167" x2="460" y2="167" stroke="#379C39" stroke-width="6" stroke-linecap="round"/>
+<path d="M458,154 L478,167 L458,180 Z" fill="#379C39"/>
+<line x1="398" y1="275" x2="460" y2="275" stroke="#379C39" stroke-width="6" stroke-linecap="round"/>
+<path d="M458,262 L478,275 L458,288 Z" fill="#379C39"/>
+<rect x="484" y="9.0" width="576" height="100" rx="12" fill="#097881" stroke="#097881" stroke-width="3"/>
+<text x="504" y="68.0" text-anchor="start" font-size="27" font-weight="900" fill="#FFFFFF">NUMiNAI</text>
+<line x1="708" y1="27.0" x2="708" y2="91.0" stroke="#C0E9E2" stroke-width="2"/>
+<text x="726" y="39.0" text-anchor="start" font-size="18" font-weight="700" fill="#DCF0EE">家長、學生（to C）</text>
+<text x="726" y="68.0" text-anchor="start" font-size="18" font-weight="700" fill="#DCF0EE">訂閱＋通路抽成</text>
+<text x="726" y="97.0" text-anchor="start" font-size="18" font-weight="900" fill="#FFFFFF">已上市 2026 年 8 月</text>
+<rect x="484" y="117.0" width="576" height="100" rx="12" fill="#FFFFFF" stroke="#A87C21" stroke-width="3"/>
+<text x="504" y="176.0" text-anchor="start" font-size="27" font-weight="900" fill="#A87C21">出卷閱卷</text>
+<line x1="708" y1="135.0" x2="708" y2="199.0" stroke="#E4D3AE" stroke-width="2"/>
+<text x="726" y="147.0" text-anchor="start" font-size="18" font-weight="700" fill="#5A5A5A">學校、教育局處（體制內）</text>
+<text x="726" y="176.0" text-anchor="start" font-size="18" font-weight="700" fill="#5A5A5A">與師大數學教育中心合作</text>
+<text x="726" y="205.0" text-anchor="start" font-size="18" font-weight="900" fill="#A87C21">2027 示範導入</text>
+<rect x="484" y="225.0" width="576" height="100" rx="12" fill="#EEF6EE" stroke="#BDD6BE" stroke-width="3" stroke-dasharray="9 7"/>
+<text x="504" y="284.0" text-anchor="start" font-size="22" font-weight="900" fill="#7A9E7B">教學＋班務系統</text>
+<line x1="708" y1="243.0" x2="708" y2="307.0" stroke="#BDD6BE" stroke-width="2"/>
+<text x="726" y="255.0" text-anchor="start" font-size="18" font-weight="700" fill="#7A9E7B">先自己用：營隊、思考課、美數</text>
+<text x="726" y="284.0" text-anchor="start" font-size="18" font-weight="700" fill="#7A9E7B">→ 授權給體制外機構</text>
+<text x="726" y="313.0" text-anchor="start" font-size="18" font-weight="900" fill="#7A9E7B">尚未上線</text>
+<text x="292" y="356" text-anchor="start" font-size="17" font-weight="900" fill="#004B24">共用</text>
+<text x="334" y="356" text-anchor="start" font-size="17" font-weight="700" fill="#4A4A4A">知識點結構、AI 引擎</text>
+<text x="516" y="356" text-anchor="start" font-size="17" font-weight="700" fill="#C4C4C4">｜</text>
+<text x="548" y="356" text-anchor="start" font-size="17" font-weight="900" fill="#A87C21">不共用</text>
+<text x="610" y="356" text-anchor="start" font-size="17" font-weight="700" fill="#4A4A4A">題庫（段考公平性）</text>
+</svg></div>
+      <div class="msask"><span class="msask__l">原則</span><span class="msask__q">授權 → 體制外機構；出卷閱卷 → 學校</span></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">20</span><span class="page-label__bar"></span><span>海外</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">海外：Outbound / Inbound / Local</div>
+      <div class="ov-fig"><svg viewBox="0 0 1060 420" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" font-family="inherit" role="img" aria-label="海外的三種應對：出團讓學生去海外、來台讓海外台僑子女到台灣、在當地靠授權由僑校開課並在地轉譯">
+<defs><marker id="ovarh" viewBox="0 0 12 12" refX="9.5" refY="6" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 1 1 L 11 6 L 1 11 Z" fill="#004B24"/></marker></defs>
+<circle cx="600" cy="212" r="192" fill="#E1F0E1"/>
+<circle cx="600" cy="212" r="150" fill="#379C39"/>
+<circle cx="600" cy="212" r="84" fill="#004B24"/>
+<text x="602.5" y="48" text-anchor="middle" font-size="28" font-weight="900" letter-spacing="5" fill="#004B24">海外</text>
+<text x="600" y="206" text-anchor="middle" font-size="26" font-weight="900" fill="#FFFFFF">僑校開課</text>
+<text x="600" y="242" text-anchor="middle" font-size="22" font-weight="900" fill="#E8FF3A">NUMiNAI 導入</text>
+<text x="600" y="318" text-anchor="middle" font-size="23" font-weight="900" fill="#FFFFFF">校外臺僑子女招生</text>
+<text x="600" y="388" text-anchor="middle" font-size="24" font-weight="900" fill="#004B24">在地轉譯</text>
+<circle cx="90" cy="212" r="70" fill="#004B24"/>
+<text x="90" y="225" text-anchor="middle" font-size="34" font-weight="900" fill="#FFFFFF">台灣</text>
+<g data-reveal>
+<path d="M 156 166 Q 300 84 432 107" fill="none" stroke="#004B24" stroke-width="5" stroke-linecap="round" marker-end="url(#ovarh)"/>
+<path d="M 432 317 Q 300 342 158 256" fill="none" stroke="#004B24" stroke-width="5" stroke-linecap="round" marker-end="url(#ovarh)"/>
+<path d="M 747 89 C 872 120 872 304 754 333" fill="none" stroke="#004B24" stroke-width="5" stroke-linecap="round" marker-end="url(#ovarh)"/>
+<rect x="191.3" y="36.0" width="217.4" height="38.0" rx="19.0" fill="#FEF4E8"/>
+<text x="300" y="63.6" text-anchor="middle" font-size="24" font-weight="900"><tspan fill="#379C39">Outbound</tspan><tspan fill="#004B24">・出團</tspan></text>
+<rect x="198.3" y="357.0" width="203.4" height="38.0" rx="19.0" fill="#FEF4E8"/>
+<text x="300" y="384.6" text-anchor="middle" font-size="24" font-weight="900"><tspan fill="#379C39">Inbound</tspan><tspan fill="#004B24">・來台</tspan></text>
+<rect x="870.2" y="193.0" width="175.6" height="38.0" rx="19.0" fill="#FEF4E8"/>
+<text x="958" y="220.6" text-anchor="middle" font-size="24" font-weight="900"><tspan fill="#379C39">Local</tspan><tspan fill="#004B24">・授權</tspan></text>
+</g>
+</svg></div>
+      <div class="ov-cards" data-reveal>
+        <div class="ov-card">
+          <div class="ov-card__m">Outbound</div>
+          <div class="ov-card__t">讓學生去海外</div>
+          <div class="ov-card__b">遊學團</div>
+        </div>
+        <div class="ov-card">
+          <div class="ov-card__m">Inbound</div>
+          <div class="ov-card__t">讓海外的台僑來台灣</div>
+          <div class="ov-card__b">來台營隊</div>
+        </div>
+        <div class="ov-card">
+          <div class="ov-card__m">Local</div>
+          <div class="ov-card__t">在當地做的應對</div>
+          <div class="ov-card__b">僑校開課・NUMiNAI 導入・授權・在地轉譯</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide probe-chapter" style="background:#FEF4E8;">
+    <div class="probe-chapter__left probe-chapter__left--img"><img class="probe-chapter__img" src="assets/chapter-04-street.png" alt="一條街四個店面：三間教室、一個展示櫥窗"><div class="probe-chapter__num probe-chapter__num--stamp">04</div></div>
+    <div class="probe-chapter__right">
+      <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+      <div class="probe-chapter__label">CHAPTER 04</div>
+      <div class="probe-chapter__title">現有業務的拓展</div>
+      <div class="probe-chapter__sub">同一個大安，從 5 間教室到 9–12 間，加上展示空間與店鋪。</div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">22</span><span class="page-label__bar"></span><span>大安校區</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">大安校區：9–12 間教室＋店面＋展示空間</div>
+      <div class="da-main">
+        <div class="da-cards">
+        <div class="da-card" data-grow><div class="da-card__hd"><div class="da-card__nm">一校</div></div><div class="da-card__big">3-4<small>間教室</small></div><div class="da-card__label is-cleared"><br></div><div class="da-card__st">未來：火箭教室改店面</div></div>
+        <div class="da-card" data-grow><div class="da-card__hd"><div class="da-card__nm">二校</div></div><div class="da-card__big">2<small>間教室</small></div><div class="da-card__label is-cleared"><br></div><div class="da-card__st">營運中</div></div>
+        <div class="da-card" data-grow><div class="da-card__hd"><div class="da-card__nm">三校</div></div><div class="da-card__big">4<small>間教室</small></div><div class="da-card__label">近 90 坪　｜　月租 32 萬</div><div class="da-card__st">2026 年 4 月開校</div></div>
+        <div class="da-card da-card--tbd" data-grow><div class="da-card__hd"><div class="da-card__nm">四校</div><span class="da-card__tag">評估中</span></div><div class="da-card__big">3<small>間教室</small></div><div class="da-card__label">100 坪　｜　月租約 25 萬</div><div class="da-card__st">一校2F，複合使用</div></div>
+        </div>
+        <div class="da-kpis" data-reveal>
+          <div class="da-kpi">
+            <div class="da-kpi__n">9–13</div>
+            <div class="da-kpi__c">
+              <div class="da-kpi__t">間教室</div>
+              <div class="da-kpi__label">3＋2＋4＝9；簽了四校再＋3</div>
+            </div>
+          </div>
+          <div class="da-kpi">
+            <div class="da-kpi__n">10<small>坪</small></div>
+            <div class="da-kpi__c"><div class="da-kpi__t">店面</div><div class="da-kpi__label is-cleared"><br></div></div>
+            <div class="da-kpi__p">＋</div>
+            <div class="da-kpi__n da-kpi__n--tbd">40<small>坪</small></div>
+            <div class="da-kpi__c"><div class="da-kpi__t da-kpi__t--tbd">展示活動空間</div><div class="da-kpi__label da-kpi__label--tbd">四校・教育娛樂部使用</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="msask" data-reveal><span class="msask__l">目標</span><span class="msask__q">展示活動空間：吸引國內外觀光客、停留 1 小時；營運內容尚未釐清</span></div>
+    </div>
+  </section>
+
+  <section class="slide xp-page" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">23</span><span class="page-label__bar"></span><span>數學特展</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">大阪 × 台灣數學特展：繼營隊後的重要ToC業務</div>
+      <div class="xp-flow" data-reveal>
+        <div class="xp-card xp-card--a"><div class="xp-card__no">第一站</div><div class="xp-card__t">台北</div><div class="xp-card__w">2027/6–8 , 80~100坪</div><div class="xp-card__b is-cleared"><br></div></div>
+        <div class="xp-arrow">→</div>
+        <div class="xp-card xp-card--b"><div class="xp-card__no">第二站</div><div class="xp-card__t">台中/桃園</div><div class="xp-card__w">2027/9–11&nbsp;</div><div class="xp-card__b is-cleared"><br></div></div>
+        <div class="xp-arrow">→</div>
+        <div class="xp-card xp-card--c"><div class="xp-card__no">第三站</div><div class="xp-card__t">大阪科學館</div><div class="xp-card__w">2027/12-2028</div><div class="xp-card__b is-cleared"><br></div></div>
+      </div>
+      <div class="xp-img" data-fill><img src="assets/expo-frieze.png" alt="數學特展現場：鑲嵌牆、碎形積木、拼地磚的孩子與紀念品櫃台"></div>
+      <div class="msask"><span class="msask__l is-cleared"><br></span><span class="msask__q"><b>教育娛樂部主責</b>，內容、設計、行銷協助</span></div>
+      <div class="foot is-cleared"><br></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">24</span><span class="page-label__bar"></span><span>分組討論</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">分組討論</div>
+      <div class="gd"><div class="gd-card"><div class="gd-card__head" style="background:#004B24;"><div class="gd-card__no">第 1 組</div><div class="gd-card__t">授權組</div></div><div class="gd-card__body"><div class="gd-card__l">主要</div><div class="gd-card__m">課程發展部＋教學部</div><div class="gd-chips"><span class="gd-chip">＋執行長特助</span></div><div class="gd-card__q">方案定稿、10 月宣傳上線、1 月確定對象、師培第一梯...</div><div class="gd-card__p">對應 P15–18</div></div></div><div class="gd-card"><div class="gd-card__head" style="background:#379C39;"><div class="gd-card__no">第 2 組</div><div class="gd-card__t">大安校區與展覽組</div></div><div class="gd-card__body"><div class="gd-card__l">主要</div><div class="gd-card__m">美數學院＋教育娛樂部</div><div class="gd-chips"><span class="gd-chip">＋品牌行銷部</span><span class="gd-chip">＋設計部</span></div><div class="gd-card__q">特展、教室平日活用<div>40 坪發想＋店面</div></div><div class="gd-card__p">對應 P22–23</div></div></div><div class="gd-card"><div class="gd-card__head" style="background:#097881;"><div class="gd-card__no">第 3 組</div><div class="gd-card__t">NUMiNAI 組</div></div><div class="gd-card__body"><div class="gd-card__l">主要</div><div class="gd-card__m">研發部（全部）</div><div class="gd-chips"><span class="gd-chip">＋創新事業部</span></div><div class="gd-card__q">行銷、實體、出卷閱卷 3 月示範<div>班務 v1、工程師擴編</div></div><div class="gd-card__p">對應 P11–13、P19</div></div></div></div>
+      <div class="msask"><span class="msask__l">巡迴</span><span class="msask__q">財務、人資每組 15 分鐘</span></div>
+    </div>
+  </section>
+
+  <section class="slide probe-chapter" style="background:#FEF4E8;">
+    <div class="probe-chapter__left probe-chapter__left--img"><img class="probe-chapter__img" src="assets/chapter-05-team.png" alt="同事各在崗位，一張桌子是小機器人在整理表單"><div class="probe-chapter__num probe-chapter__num--stamp">05</div></div>
+    <div class="probe-chapter__right">
+      <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+      <div class="probe-chapter__label">CHAPTER 05</div>
+      <div class="probe-chapter__title">組織與人才</div>
+      <div class="probe-chapter__sub">新事，新人才；重複的事，交給 AI</div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">26</span><span class="page-label__bar"></span><span>公共事務組</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">新增任務編組：公共事務組</div>
+      <div class="hr-two hr-two--org">
+        <div class="hr-card">
+          <div class="hr-card__t">執行長室下</div>
+          <div class="hr-card__s">與創新事業部並列；各主管兼任</div>
+          <div class="hr-mems">
+            <div class="hr-mem"><div class="hr-mem__k">組長</div><div class="hr-mem__v">執行長特助<span class="hr-tag">兼任</span></div></div>
+            <div class="hr-mem"><div class="hr-mem__k">組員</div><div class="hr-mem__v">教育娛樂部長<span class="hr-tag">兼任</span></div></div>
+            <div class="hr-mem"><div class="hr-mem__k">組員</div><div class="hr-mem__v">課程發展部副部長<span class="hr-tag">兼任</span></div></div>
+          </div>
+        </div>
+        <div class="hr-scope" data-reveal>
+          <div class="hr-scope__t">只對公部門</div>
+          <div class="hr-scope__s">負責開案與關係</div>
+          <div class="hr-list">
+            <div class="hr-li"><b>縣市教育局處</b>：出卷閱卷、委託贊助、MOU</div>
+            <div class="hr-li"><b>師大數學教育中心</b>：產學合作</div>
+            <div class="hr-li is-cleared"><br></div>
+            <div class="hr-li is-cleared"><br></div>
+            <div class="hr-li"><b>EX: 數感盃該怎麼合作？</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="msask" data-reveal><span class="msask__l">討論</span><span class="msask__q">既要單一對外窗口，該如何與各部門合作</span></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">27</span><span class="page-label__bar"></span><span>數位人才</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">數位轉型：工程師＋業務端＋AI</div>
+      <div class="hr-exp">
+        <div class="hr-exp__k">軟體開發組</div>
+        <div class="hr-exp__i"><span><b>5 位</b>：與跨部門合作產品研發</span></div>
+        <div class="hr-exp__i"><span><b>招募 1–2 位</b><span class="hr-tag hr-tag--new is-cleared"></span></span></div>
+        <div class="hr-exp__i"><span>班務系統初版：<b>軟體+課發</b>&nbsp;</span></div>
+      </div>
+      <div class="hr-cols" data-reveal>
+        <div class="hr-col">
+          <div class="hr-h">各部門的簡易開發</div>
+          <div class="hr-rule"></div>
+          <div class="hr-items">
+            <div class="hr-item">班務、倉儲、簡報系統等</div>
+            <div class="hr-item"><b>說清楚， AI就能做到</b></div>
+            <div class="hr-item is-cleared"><br></div>
+          </div>
+        </div>
+        <div class="hr-col">
+          <div class="hr-h">各部門內建開發能力的必要</div>
+          <div class="hr-rule"></div>
+          <div class="hr-items">
+            <div class="hr-item"><span style="font-weight: 900; color: rgb(0, 75, 36);">領域專業：</span>工程師不懂排課</div>
+            <div class="hr-item"><font color="#004b24"><b>工程師：</b></font>大架構與協作</div>
+            <div class="hr-item is-cleared"><br></div>
+          </div>
+        </div>
+        <div class="hr-col">
+          <div class="hr-h is-cleared"><br></div>
+          <div class="hr-rule"></div>
+          <div class="hr-items">
+            <div class="hr-item is-cleared"><br></div>
+            <div class="hr-item is-cleared"><br></div>
+            <div class="hr-item is-cleared"><br></div>
+          </div>
+        </div>
+      </div>
+      <div class="msask" data-reveal><span class="msask__l">重點</span><span class="msask__q">AI持續進步，想想看去年跟今年的差別</span></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">28</span><span class="page-label__bar"></span><span>組織與人力</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">減緩人事擴編、加強 AI 協作、提升效率</div>
+      <div class="orgsvg oh-svg"><svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 566" font-family="'Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif" role="img" aria-label="數感實驗室 2026 組織架構">
+<rect x="690.0" y="24" width="220" height="66" rx="6" fill="#004B24" stroke="#004B24" stroke-width="2.5"/>
+<text x="800.0" y="57.0" text-anchor="middle" dominant-baseline="central" font-size="30" font-weight="700" fill="#fff">執行長</text>
+<line x1="800.0" y1="90" x2="800.0" y2="300" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="800.0" y1="140" x2="910.0" y2="140" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="910.0" y="110" width="210" height="60" rx="6" fill="#379C39" stroke="#379C39" stroke-width="2.5"/>
+<text x="1015.0" y="140.0" text-anchor="middle" dominant-baseline="central" font-size="27" font-weight="700" fill="#fff">執行長室　5</text>
+<line x1="1015.0" y1="170" x2="1015.0" y2="186" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="910.0" y1="186" x2="1120.0" y2="186" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="910.0" y1="186" x2="910.0" y2="200" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1120.0" y1="186" x2="1120.0" y2="200" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="810.0" y="200" width="200" height="66" rx="6" fill="#fff" stroke="#379C39" stroke-width="3"/>
+<text x="910.0" y="224" text-anchor="middle" dominant-baseline="central" font-size="25" font-weight="700" fill="#004B24">創新事業部</text>
+<text x="910.0" y="250" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="500" fill="#757070">NUMiNAI 數位業務</text>
+<rect x="1020.0" y="200" width="200" height="66" rx="6" fill="#fff" stroke="#379C39" stroke-width="3" stroke-dasharray="9 7"/>
+<text x="1120.0" y="224" text-anchor="middle" dominant-baseline="central" font-size="25" font-weight="700" fill="#004B24">公共事務組</text>
+<text x="1120.0" y="250" text-anchor="middle" dominant-baseline="central" font-size="15" font-weight="500" fill="#757070">任務編組・兼任</text>
+<line x1="142.22222222222223" y1="300" x2="1457.7777777777778" y2="300" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="142.22222222222223" y1="300" x2="142.22222222222223" y2="330" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="66.22222222222223" y="330" width="152" height="82" rx="6" fill="#fff" stroke="#004B24" stroke-width="2.5"/>
+<text x="142.22222222222223" y="359.52" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="700" fill="#0A0A0A">課程發展部</text>
+<text x="142.22222222222223" y="390.68" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="900" fill="#379C39">7</text>
+<line x1="306.6666666666667" y1="300" x2="306.6666666666667" y2="330" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="230.66666666666669" y="330" width="152" height="82" rx="6" fill="#fff" stroke="#004B24" stroke-width="2.5"/>
+<text x="306.6666666666667" y="359.52" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="700" fill="#0A0A0A">教學部</text>
+<text x="306.6666666666667" y="390.68" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="900" fill="#379C39">12</text>
+<line x1="471.11111111111114" y1="300" x2="471.11111111111114" y2="330" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="395.11111111111114" y="330" width="152" height="82" rx="6" fill="#fff" stroke="#004B24" stroke-width="2.5"/>
+<text x="471.11111111111114" y="359.52" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="700" fill="#0A0A0A">美數學院</text>
+<text x="467.11111111111114" y="390.68" text-anchor="end" dominant-baseline="central" font-size="26" font-weight="900" fill="#379C39">15</text>
+<rect x="475.11111111111114" y="377.68" width="40" height="26" rx="13" fill="#E8FF3A"/>
+<text x="495.11111111111114" y="390.68" text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="900" fill="#0A0A0A">＋？</text>
+<line x1="635.5555555555557" y1="300" x2="635.5555555555557" y2="330" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="559.5555555555557" y="330" width="152" height="82" rx="6" fill="#fff" stroke="#004B24" stroke-width="2.5"/>
+<text x="635.5555555555557" y="359.52" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="700" fill="#0A0A0A">研發部</text>
+<text x="635.5555555555557" y="390.68" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="900" fill="#379C39">14</text>
+<line x1="577.5555555555557" y1="412" x2="577.5555555555557" y2="528.0" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="577.5555555555557" y1="458.0" x2="599.5555555555557" y2="458.0" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="599.5555555555557" y="428" width="132" height="60" rx="6" fill="#FEF4E8" stroke="#379C39" stroke-width="2"/>
+<text x="665.5555555555557" y="449.6" text-anchor="middle" dominant-baseline="central" font-size="20" font-weight="700" fill="#004B24">軟體開發組</text>
+<text x="661.5555555555557" y="472.4" text-anchor="end" dominant-baseline="central" font-size="22" font-weight="900" fill="#379C39">5</text>
+<rect x="669.5555555555557" y="459.4" width="58" height="26" rx="13" fill="#E8FF3A"/>
+<text x="698.5555555555557" y="472.4" text-anchor="middle" dominant-baseline="central" font-size="17" font-weight="900" fill="#0A0A0A">＋1–2</text>
+<line x1="577.5555555555557" y1="528.0" x2="599.5555555555557" y2="528.0" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="599.5555555555557" y="498" width="132" height="60" rx="6" fill="#FEF4E8" stroke="#379C39" stroke-width="2"/>
+<text x="665.5555555555557" y="519.6" text-anchor="middle" dominant-baseline="central" font-size="20" font-weight="700" fill="#004B24">內容組</text>
+<text x="665.5555555555557" y="542.4" text-anchor="middle" dominant-baseline="central" font-size="22" font-weight="900" fill="#379C39">6</text>
+<line x1="800.0" y1="300" x2="800.0" y2="330" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="724.0" y="330" width="152" height="82" rx="6" fill="#fff" stroke="#004B24" stroke-width="2.5"/>
+<text x="800.0" y="359.52" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="700" fill="#0A0A0A">品牌行銷部</text>
+<text x="800.0" y="390.68" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="900" fill="#379C39">5</text>
+<line x1="964.4444444444446" y1="300" x2="964.4444444444446" y2="330" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="888.4444444444446" y="330" width="152" height="82" rx="6" fill="#fff" stroke="#004B24" stroke-width="2.5"/>
+<text x="964.4444444444446" y="359.52" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="700" fill="#0A0A0A">設計部</text>
+<text x="964.4444444444446" y="390.68" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="900" fill="#379C39">5</text>
+<line x1="1128.888888888889" y1="300" x2="1128.888888888889" y2="330" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="1052.888888888889" y="330" width="152" height="82" rx="6" fill="#fff" stroke="#004B24" stroke-width="2.5"/>
+<text x="1128.888888888889" y="359.52" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="700" fill="#0A0A0A">教育娛樂部</text>
+<text x="1128.888888888889" y="390.68" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="900" fill="#379C39">6</text>
+<line x1="1293.3333333333335" y1="300" x2="1293.3333333333335" y2="330" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="1217.3333333333335" y="330" width="152" height="82" rx="6" fill="#fff" stroke="#004B24" stroke-width="2.5"/>
+<text x="1293.3333333333335" y="359.52" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="700" fill="#0A0A0A">財務部</text>
+<text x="1293.3333333333335" y="390.68" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="900" fill="#379C39">3</text>
+<line x1="1457.7777777777778" y1="300" x2="1457.7777777777778" y2="330" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="1381.7777777777778" y="330" width="152" height="82" rx="6" fill="#fff" stroke="#004B24" stroke-width="2.5"/>
+<text x="1457.7777777777778" y="359.52" text-anchor="middle" dominant-baseline="central" font-size="24" font-weight="700" fill="#0A0A0A">人資行政部</text>
+<text x="1457.7777777777778" y="390.68" text-anchor="middle" dominant-baseline="central" font-size="26" font-weight="900" fill="#379C39">4</text>
+<line x1="1399.7777777777778" y1="412" x2="1399.7777777777778" y2="528.0" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="1399.7777777777778" y1="458.0" x2="1421.7777777777778" y2="458.0" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="1421.7777777777778" y="428" width="132" height="60" rx="6" fill="#FEF4E8" stroke="#379C39" stroke-width="2"/>
+<text x="1487.7777777777778" y="449.6" text-anchor="middle" dominant-baseline="central" font-size="20" font-weight="700" fill="#004B24">人資組</text>
+<line x1="1399.7777777777778" y1="528.0" x2="1421.7777777777778" y2="528.0" stroke="#004B24" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="1421.7777777777778" y="498" width="132" height="60" rx="6" fill="#FEF4E8" stroke="#379C39" stroke-width="2"/>
+<text x="1487.7777777777778" y="519.6" text-anchor="middle" dominant-baseline="central" font-size="20" font-weight="700" fill="#004B24">總務組</text>
+
+</svg>
+</div>
+      <div class="msask" data-reveal><span class="msask__l">原則</span><span class="msask__q">重複的事交給 AI，人做<b>決策、師生互動、同事關懷</b></span></div>
+    </div>
+  </section>
+
+  <section class="slide probe-chapter" style="background:#FEF4E8;">
+    <div class="probe-chapter__left probe-chapter__left--img"><img class="probe-chapter__img" src="assets/chapter-06-dawn.png" alt="清晨背著小包走出門，路上有空白路標"><div class="probe-chapter__num probe-chapter__num--stamp">06</div></div>
+    <div class="probe-chapter__right">
+      <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+      <div class="probe-chapter__label">CHAPTER 06</div>
+      <div class="probe-chapter__title">結論</div>
+      <div class="probe-chapter__sub">今天要帶走的事。</div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FFFFFF;">
+    <div class="page-label"><span class="page-label__num">30</span><span class="page-label__bar"></span><span>開放題</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">四個開放題</div>
+      <div class="chart"><svg viewBox="0 0 1060 400" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" font-family="inherit" role="img" aria-label="四個部門的開放題">
+<g data-reveal>
+<path d="M530,200 C530,87 440,200 440,87" fill="none" stroke="#379C39" stroke-width="3" opacity="0.55"/>
+<path d="M530,200 C530,87 620,200 620,87" fill="none" stroke="#A87C21" stroke-width="3" opacity="0.55"/>
+<path d="M530,200 C530,313 440,200 440,313" fill="none" stroke="#004B24" stroke-width="3" opacity="0.55"/>
+<path d="M530,200 C530,313 620,200 620,313" fill="none" stroke="#097881" stroke-width="3" opacity="0.55"/>
+</g>
+<circle cx="530" cy="200" r="78" fill="#004B24"/>
+<text x="530" y="188" text-anchor="middle" font-size="26" font-weight="900" fill="#E8FF3A">2027</text>
+<text x="530" y="222" text-anchor="middle" font-size="28" font-weight="900" fill="#FFFFFF">開放題</text>
+<g data-reveal>
+<rect x="40" y="26" width="400" height="122" rx="12" fill="#FFFFFF" stroke="#379C39" stroke-width="3"/>
+<rect x="54" y="44" width="10" height="86" rx="5" fill="#379C39"/>
+<text x="76" y="60" text-anchor="start" font-size="17" font-weight="900" fill="#379C39">1　教育娛樂部</text>
+<text x="76" y="94" text-anchor="start" font-size="27" font-weight="900" fill="#0A0A0A">策展獲利模式</text>
+<text x="76" y="124" text-anchor="start" font-size="16" font-weight="700" fill="#757070">特展三站怎麼賺、40 坪要成為什麼</text>
+<rect x="620" y="26" width="400" height="122" rx="12" fill="#FFFFFF" stroke="#A87C21" stroke-width="3"/>
+<rect x="634" y="44" width="10" height="86" rx="5" fill="#A87C21"/>
+<text x="656" y="60" text-anchor="start" font-size="17" font-weight="900" fill="#A87C21">2　設計部</text>
+<text x="656" y="94" text-anchor="start" font-size="27" font-weight="900" fill="#0A0A0A">產品、店鋪</text>
+<text x="656" y="124" text-anchor="start" font-size="16" font-weight="700" fill="#757070">10 坪店鋪賣什麼、教具怎麼產品化</text>
+<rect x="40" y="252" width="400" height="122" rx="12" fill="#FFFFFF" stroke="#004B24" stroke-width="3"/>
+<rect x="54" y="270" width="10" height="86" rx="5" fill="#004B24"/>
+<text x="76" y="286" text-anchor="start" font-size="17" font-weight="900" fill="#004B24">3　教學部・內容組</text>
+<text x="76" y="320" text-anchor="start" font-size="27" font-weight="900" fill="#0A0A0A">學習診斷、家長的數學課</text>
+<text x="76" y="350" text-anchor="start" font-size="16" font-weight="700" fill="#757070">名稱、頻率、定價、人力</text>
+<rect x="620" y="252" width="400" height="122" rx="12" fill="#FFFFFF" stroke="#097881" stroke-width="3"/>
+<rect x="634" y="270" width="10" height="86" rx="5" fill="#097881"/>
+<text x="656" y="286" text-anchor="start" font-size="17" font-weight="900" fill="#097881">4　軟體開發組</text>
+<text x="656" y="320" text-anchor="start" font-size="27" font-weight="900" fill="#0A0A0A">開發排程、AI 系統發展</text>
+<text x="656" y="350" text-anchor="start" font-size="16" font-weight="700" fill="#757070">閱卷上傳、班務 v1、引擎抽出來的順序</text>
+</g>
+</svg></div>
+      <div class="msask"><span class="msask__l">follow-up</span><span class="msask__q">主管會議、個別討論、主管間討論<br></span></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FEF4E8;">
+    <div class="page-label"><span class="page-label__num">31</span><span class="page-label__bar"></span><span>我的感受</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">擬定策略跟計劃已經不是一兩個人能做的了</div>
+      <div class="cl3">
+        <div class="cl3__txt" data-grow>
+          <div class="cl3__p">公司長到這個規模，事情太多，一個人覆蓋不到。</div>
+          <div class="cl3__p cl3__p--hi" data-reveal>策略思考，是每一位主管的功課。</div>
+        </div>
+        <div class="cl3__img"><img src="assets/plan-together.png" alt="一張太大的計畫圖，一個人撐不住，同事各接一角"></div>
+      </div>
+      <div class="msask" data-reveal><span class="msask__l">小結</span><span class="msask__q">每一位主管，都要學習策略思考、擬定部門未來發展</span></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FEF4E8;">
+    <div class="page-label"><span class="page-label__num">32</span><span class="page-label__bar"></span><span>結論・回頭看</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">自我成長：無價</div>
+      <div class="cl3">
+        <div class="cl3__txt" data-grow>
+          <div class="cl3__q">辛苦是真的，進步也是真的。</div>
+        </div>
+        <div class="cl3__img"><img src="assets/self-growth.png" alt="門框上的身高刻度，今年的那一條比去年高很多"></div>
+      </div>
+      <div class="msask" data-reveal><span class="msask__l">小結</span><span class="msask__q">今年的你比去年進步很多；這種成長是成就感、自我實現</span></div>
+    </div>
+  </section>
+
+  <section class="slide" style="background:#FEF4E8;">
+    <div class="page-label"><span class="page-label__num">33</span><span class="page-label__bar"></span><span>結論・期許</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame">
+      <div class="hero">接班梯隊的文化</div>
+      <div class="cl3">
+        <div class="cl3__txt" data-grow>
+          <div class="cl3__q is-cleared"><br></div>
+          <div class="cl3__p">當我們去負責更重要的任務，<div>誰能顧好我們現在的任務？</div></div>
+          <div class="cl3__p cl3__p--hi" data-reveal>培養接班梯隊的文化</div>
+        </div>
+        <div class="cl3__img"><img src="assets/close-succession.png" alt="接班梯隊：資深同事走向更高的平台，把手上的事交給下一位"></div>
+      </div>
+      <div class="msask" data-reveal><span class="msask__l">Homework</span><span class="msask__q">每位主管請思考：接班人是誰、怎麼培養</span></div>
+    </div>
+  </section>
+
+  <section class="slide qt-page" style="background:#FEF4E8;">
+    <img class="qt__bg" data-bleed="50 0" src="assets/mascots/road.png" alt="一條鋪磚的路往上爬、翻過山丘通往許多小學校與日出；Num、Numi、Pimi 在路的近處玩">
+    <div class="page-label"><span class="page-label__num">34</span><span class="page-label__bar"></span><span>結語</span></div>
+    <div class="brand-footer"><svg class="brand-logo" viewBox="0 0 162.16 45.83" role="img" aria-label="數感實驗室"><use href="#nl-logo"/></svg></div>
+    <div class="slide-frame qt">
+      <div class="qt__txt">
+        <div class="qt__q">不難的事不做；<br>不能規模化的事不做；<br>不能有長遠影響力的事不做。</div>
+        <div class="qt__by">—— 方新舟</div>
+        <div class="qt__add" data-reveal>
+          <div class="qt__add-l">Numeracy Lab</div>
+          <div class="qt__add-t">不好玩的事不做。</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+</div>
+
+<script>
+(function () {
+  var svgs = document.querySelectorAll('svg.bip');
+  function reset(svg) {
+    svg.classList.remove('is-on');
+    svg.querySelectorAll('.hot').forEach(function (x) { x.classList.remove('hot'); });
+  }
+  svgs.forEach(function (svg) {
+    var links = svg.querySelectorAll('.bip__link');
+    svg.querySelectorAll('.bip__node').forEach(function (node) {
+      node.addEventListener('click', function (ev) {
+        ev.stopPropagation();
+        var live = svg.classList.contains('is-on') && node.classList.contains('hot');
+        reset(svg);
+        if (live) return;
+        var side = node.getAttribute('data-side');
+        var key = node.getAttribute('data-key');
+        var other = side === 'i' ? 'd' : 'i';
+        svg.classList.add('is-on');
+        node.classList.add('hot');
+        links.forEach(function (link) {
+          if (link.getAttribute('data-' + side) !== key) return;
+          link.classList.add('hot');
+          var mate = link.getAttribute('data-' + other);
+          svg.querySelectorAll('.bip__node[data-side="' + other + '"][data-key="' + mate + '"]')
+             .forEach(function (m) { m.classList.add('hot'); });
+        });
+      });
+    });
+  });
+  document.addEventListener('keydown', function () { svgs.forEach(reset); });
+})();
+(function () {
+  // 可打字的開放題卡：鍵盤／點擊不往上冒泡（否則 presenter 會翻頁或切模式），內容存 localStorage
+  document.querySelectorAll('.op2-card__in').forEach(function (el) {
+    var key = el.getAttribute('data-key');
+    try { var saved = localStorage.getItem(key); if (saved) el.textContent = saved; } catch (e) {}
+    ['keydown', 'keyup', 'keypress', 'click', 'mousedown', 'touchstart', 'touchend'].forEach(function (t) {
+      el.addEventListener(t, function (ev) { ev.stopPropagation(); });
+    });
+    el.addEventListener('input', function () { try { localStorage.setItem(key, el.textContent); } catch (e) {} });
+  });
+})();
+(function () {
+  var rows = document.querySelectorAll('.gr-row');
+  rows.forEach(function (r) {
+    r.addEventListener('click', function (ev) { ev.stopPropagation(); r.classList.toggle('is-open'); });
+  });
+  document.addEventListener('keydown', function () { rows.forEach(function (r) { r.classList.remove('is-open'); }); });
+})();
+(function () {
+  function cur() {
+    var s = document.querySelectorAll('.deck > .slide');
+    for (var i = 0; i < s.length; i++) if (s[i].classList.contains('active')) return i;
+    return 0;
+  }
+  function jump(n) {
+    var s = document.querySelectorAll('.deck > .slide');
+    var t = n - 1; if (t < 0 || t >= s.length) return;
+    var c = cur(), key = t > c ? 'ArrowRight' : 'ArrowLeft', d = Math.abs(t - c);
+    for (var i = 0; i < d; i++) document.dispatchEvent(new KeyboardEvent('keydown', { key: key, bubbles: true }));
+  }
+  document.querySelectorAll('.mx-hot[data-goto]').forEach(function (g) {
+    g.addEventListener('click', function (ev) {
+      ev.stopPropagation(); ev.preventDefault();
+      if (g.blur) g.blur();
+      jump(parseInt(g.getAttribute('data-goto'), 10));
+    });
+  });
+})();
+</script>
+<script src="presenter.js"></script>
+<script src="slide-audit.js"></script>
+</body>
+</html>
